@@ -13,7 +13,7 @@ export default function VideoTag() {
             </div>  
             <div className="md:text-2xl text-md absolute md:top-3/4 top-2/3 left-10 z-10">
                 <span className="md:text-5xl text-3xl opacity-100">Luxury isn’t an upgrade—<span className="italic">it’s our standard. </span><br/></span>
-                Experience the difference that comes from unmatched dedication, meticulous attention to detail, and a passion for curating extraordinary journeys:
+                Experience the difference that comes from unmatched dedication, meticulous attention to detail, and a passion for curating extraordinary journeys.
             </div>
         </div>
     )

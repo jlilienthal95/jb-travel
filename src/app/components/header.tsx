@@ -7,7 +7,7 @@ export default function Header() {
             <Link href="/">
                 <img src="/sitelogo.png"
                     alt="J. Brescia Travel Co."
-                    className="h-20 w-auto md:h-32 md:w-auto">
+                    className="h-14 sm:h-20 md:h-32 w-auto">
                 </img>
             </Link>
             <div className="text-black">
