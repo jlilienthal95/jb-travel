@@ -11,9 +11,9 @@ export default function VideoTag() {
             </video>
             <div className="absolute bottom-0 z-0 w-full h-1/3 border-box bg-gradient-to-t from-black to-transparent">
             </div>  
-            <div className="md:text-2xl text-md absolute md:top-[clamp(70%,70%,80%)] top-[clamp(40%,40%,50%)] left-[clamp(5%,2%,10%)] z-10 center-on-small-height">
+            <div className="md:text-2xl text-md absolute top-[clamp(70%,70%,80%)] left-[clamp(5%,2%,10%)] z-10 center-on-small-height max-w-5xl">
                 <span className="text-[clamp(1.5rem,5vw,3rem)] opacity-100">Luxury isn’t an upgrade—<span className="italic">it’s our standard. </span><br/></span>
-                <span className="hidden md:block">Experience the difference that comes from unmatched dedication, meticulous attention to detail, and a passion for curating extraordinary journeys.</span>
+                <span className="">Experience the difference that comes from unmatched dedication, meticulous attention to detail, and a passion for curating extraordinary journeys.</span>
             </div>
         </div>
     )
