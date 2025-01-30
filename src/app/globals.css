@@ -26,6 +26,9 @@
       border-radius: 8px; /* Optional: round the corners */
     }
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @media (max-height: 800px) {

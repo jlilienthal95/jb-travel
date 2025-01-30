@@ -7,7 +7,7 @@ export default function Home() {
       <Header/>
 
       <div id="mainContainer"
-        className="relative h-full snap-y snap-mandatory overflow-y-scroll no-scrollbar">
+        className="relative h-full snap-y snap-mandatory overflow-y-scroll no-scrollbar scroll-smooth">
         <VideoTag />
         <div id="expertGuidance"
           className="bg-gray-400 w-full h-full flex snap-start snap-always z-200">
