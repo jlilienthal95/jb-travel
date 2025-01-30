@@ -13,11 +13,24 @@
     --foreground: #ededed;
   }
 }
+
 @layer utilities {
-  @media (max-height: 580px) {
+  @media (max-height: 800px) {
     .center-on-small-height {
       @apply absolute top-1/2 transform -translate-y-1/2 left-10;
+      @apply shadow-lg;  /* Adds a shadow for contrast */
+      
+      /* Optionally, if the background is too bright, add a semi-transparent overlay */
+      background-color: rgba(0, 0, 0, 0.5); /* A dark transparent overlay for contrast */
+      padding: 1rem;  /* Add some padding around text for better spacing */
+      border-radius: 8px; /* Optional: round the corners */
     }
+  }
+}
+
+@media (max-height: 800px) {
+  .hide-on-small-height {
+    display: none;
   }
 }
 
