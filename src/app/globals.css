@@ -13,6 +13,13 @@
     --foreground: #ededed;
   }
 }
+@layer utilities {
+  @media (max-height: 580px) {
+    .center-on-small-height {
+      @apply absolute top-1/2 transform -translate-y-1/2 left-10;
+    }
+  }
+}
 
 @font-face {
   font-family: montserrat;
