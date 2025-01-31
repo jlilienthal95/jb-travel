@@ -13,7 +13,7 @@ export default function VideoTag() {
                 Not supported by your browser.
             </video>
             <div className="w-full h-1/2 bg-gradient-to-t from-black via-black/80 to-transparent flex justify-center absolute">
-                <div className="max-w-5xl w-full px-5 text-white md:text-2xl text-md mt-auto mb-10 mx-5">
+                <div className="max-w-5xl w-full px-5 text-white md:text-2xl text-md mt-auto mb-14 mx-5">
                     <span className="text-[clamp(1.5rem,5vw,3rem)] opacity-100">Luxury isn’t an upgrade—<span className="italic">it’s our standard. </span><br/></span>
                     <span>Experience the difference that comes from unmatched dedication, meticulous attention to detail, and a passion for curating extraordinary journeys.</span>
                     <div id="buttonContainer" className="flex pt-5 pb-5 items-center justify-start gap-x-20">
