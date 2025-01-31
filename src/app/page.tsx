@@ -2,6 +2,8 @@ import Header from './components/header'
 import VideoTag from './components/videoTag';
 import ExpertGuidance from './components/expertGuidance';
 import PersonalizedPlanning from './components/personalizedPlanning';
+import UnmatchedSupport from './components/unmatchedSupport';
+import ElevatedExperience from './components/elevatedExperience';
 
 export default function Home() {
   return (
@@ -13,14 +15,8 @@ export default function Home() {
         <VideoTag />
         <ExpertGuidance />
         <PersonalizedPlanning />
-        <div id="unmatchedSupport"
-          className="bg-gray-600 w-full h-full flex snap-start snap-always">
-          div 4
-        </div>
-        <div id="elevatedExperience"
-          className="bg-gray-700 w-full h-full flex snap-start snap-always">
-          div 5
-        </div>
+        <UnmatchedSupport />
+        <ElevatedExperience/>
       </div>
     </div>
 );
