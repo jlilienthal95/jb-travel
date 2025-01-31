@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Header() {
     return (
         <div id="header"
-            className="bg-white w-full flex items-center justify-around fixed top-0 z-10 opacity-65 max-h-30 hide-on-small-height">
+            className="bg-white w-full flex items-center justify-around fixed top-0 z-10 opacity-65 max-h-30">
             <Link href="/">
                 <img src="/sitelogo.png"
                     alt="J. Brescia Travel Co."

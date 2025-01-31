@@ -1,5 +1,7 @@
-import VideoTag from './components/videoTag';
 import Header from './components/header'
+import VideoTag from './components/videoTag';
+import ExpertGuidance from './components/expertGuidance';
+import PersonalizedPlanning from './components/personalizedPlanning';
 
 export default function Home() {
   return (
@@ -9,14 +11,8 @@ export default function Home() {
       <div id="mainContainer"
         className="relative h-full snap-y snap-mandatory overflow-y-scroll no-scrollbar scroll-smooth">
         <VideoTag />
-        <div id="expertGuidance"
-          className="bg-gray-400 w-full h-full flex snap-start snap-always z-200">
-          div 2
-        </div>
-        <div id="personalizedPlanning"
-          className="bg-gray-500 w-full h-full flex snap-start snap-always">
-          div 3
-        </div>
+        <ExpertGuidance />
+        <PersonalizedPlanning />
         <div id="unmatchedSupport"
           className="bg-gray-600 w-full h-full flex snap-start snap-always">
           div 4
