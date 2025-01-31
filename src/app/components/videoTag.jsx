@@ -17,7 +17,7 @@ export default function VideoTag() {
                     <span className="text-[clamp(1.5rem,5vw,3rem)] opacity-100">Luxury isn’t an upgrade—<span className="italic">it’s our standard. </span><br/></span>
                     <span>Experience the difference that comes from unmatched dedication, meticulous attention to detail, and a passion for curating extraordinary journeys.</span>
                     <div id="buttonContainer" className="flex pt-5 pb-5 items-center justify-between gap-x-20">
-                        <button className="hover:bg-white hover:bg-opacity-25 rounded-xl p-4 text-white border-2 border-opacity-25 border-gray-50">Plan My Trip</button>
+                        <button className="hover:bg-white hover:bg-opacity-25 rounded-xl p-4 text-white border-2 border-opacity-25 border-gray-50 min-w-40">Plan My Trip</button>
                         <Link href="#expertGuidance">
                             <FaChevronDown className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl hover:text-white text-gray-400"/>
                         </Link>
