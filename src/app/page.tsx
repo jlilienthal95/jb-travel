@@ -2,8 +2,6 @@ import Header from './components/header'
 import VideoTag from './components/videoTag';
 import UIFrame from './components/UIFrame';
 
-import { FaChevronDown } from "react-icons/fa";
-
 export default function Home() {
   const defBgClass = "bg-cover bg-center w-full h-full flex flex-col snap-start snap-always justify-end z-09"
   return (

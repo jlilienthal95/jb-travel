@@ -1,5 +1,3 @@
-import { FaChevronCircleDown } from "react-icons/fa";
-import { FaChevronCircleUp } from "react-icons/fa";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
 
 import Link from 'next/link';
