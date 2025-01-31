@@ -1,4 +1,4 @@
-import { FaChevronCircleDown } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import Link from 'next/link'
 
 export default function VideoTag() {
@@ -13,14 +13,15 @@ export default function VideoTag() {
                 Not supported by your browser.
             </video>
             <div className="w-full h-1/2 bg-gradient-to-t from-black via-black/80 to-transparent flex justify-center absolute">
-                <div className="max-w-5xl w-full px-5 text-white md:text-2xl text-md mt-auto mb-14 mx-5">
+                <div className="max-w-5xl w-full px-5 text-white md:text-2xl text-md mt-auto mb-16 mx-5">
                     <span className="text-[clamp(1.5rem,5vw,3rem)] opacity-100">Luxury isn’t an upgrade—<span className="italic">it’s our standard. </span><br/></span>
                     <span>Experience the difference that comes from unmatched dedication, meticulous attention to detail, and a passion for curating extraordinary journeys.</span>
-                    <div id="buttonContainer" className="flex pt-5 pb-5 items-center justify-start gap-x-20">
+                    <div id="buttonContainer" className="flex pt-5 pb-5 items-center justify-between gap-x-20">
+                        <button className="hover:bg-white hover:bg-opacity-25 rounded-xl p-4 text-white border-2 border-opacity-25 border-gray-50">Plan My Trip</button>
                         <Link href="#expertGuidance">
-                            <FaChevronCircleDown className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl hover:text-white text-gray-300"/>
+                            <FaChevronDown className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl hover:text-white text-gray-400"/>
                         </Link>
-                        <button className="bg-white bg-opacity-65 rounded-xl p-4 text-black border-2 box-border border-transparent hover:bg-opacity-100">Plan My Trip</button>
+                        <button className="rounded-xl p-4 border-gray-50 text-transparent">Plan My Trip</button>
                     </div>
                 </div>
             </div>
