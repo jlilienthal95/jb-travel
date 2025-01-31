@@ -19,7 +19,7 @@ export default function UIFrame(props: UIFrameProps) {
                     <span className="text-[clamp(1.5rem,5vw,3rem)]">{props.title}<br/></span>
                     <span>{props.mainText}</span>
                     <div id="buttonContainer" className="flex pt-5 pb-5 items-center justify-between gap-x-20">
-                        <button className="hover:bg-white hover:bg-opacity-25 rounded-xl p-4 text-white border-2 border-opacity-25 border-gray-50">Plan My Trip</button>
+                        <button className="hover:bg-white hover:bg-opacity-25 rounded-xl p-4 text-white border-2 border-opacity-25 border-gray-50 min-w-20">Plan My Trip</button>
                         <Link href={props.link}>
                             {props.isArrowDown ? <FaChevronDown className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl hover:text-white text-gray-400"/> : <FaChevronUp className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl hover:text-white text-gray-300"/>}
                         </Link>
