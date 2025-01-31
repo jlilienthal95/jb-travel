@@ -5,7 +5,7 @@ export default function ExpertGuidance() {
     return (
         <div id="expertGuidance" className="bg-[url(/alaska.jpg)] bg-cover bg-center w-full h-full flex flex-col snap-start snap-always justify-end z-09">
             <div className="w-full h-1/2 bg-gradient-to-t from-black via-black/100 to-transparent flex justify-center">
-                <div className="max-w-5xl w-full px-5 text-white md:text-2xl text-md mt-auto mx-5">
+                <div className="max-w-5xl w-full px-5 text-white md:text-2xl text-md mt-auto  mb-10 mx-5">
                     <span className="text-[clamp(1.5rem,5vw,3rem)]">- Expert Guidance<br/></span>
                     <span>Our industry expertise and insider knowledge offer exclusive recommendations—from hidden gems to can’t-miss attractions—ensuring your trip goes well beyond the ordinary.</span>
                     <div id="buttonContainer" className="flex pt-5 pb-5 items-center justify-start gap-x-20">
