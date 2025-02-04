@@ -4,7 +4,7 @@ import { IoMdMail } from "react-icons/io";
 
 type headerProps = {
     formIsOpen: boolean,
-    setFormIsOpen: Function
+    setFormIsOpen: (arg:boolean) => void
 }
 
 export default function Header(props:headerProps) {
