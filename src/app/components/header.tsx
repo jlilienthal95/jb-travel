@@ -2,7 +2,12 @@ import Link from 'next/link';
 import { FaSquarePhone } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 
-export default function Header(props) {
+type headerProps = {
+    formIsOpen: boolean,
+    setFormIsOpen: Function
+}
+
+export default function Header(props:headerProps) {
     const openForm = () => {
         if(props.formIsOpen){
             props.setFormIsOpen(false);
