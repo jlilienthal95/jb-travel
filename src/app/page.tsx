@@ -1,15 +1,16 @@
 import Header from './components/header'
 import VideoTag from './components/videoTag';
 import UIFrame from './components/UIFrame';
+import Footer from './components/footer';
+import TripForm from './components/tripForm';
 
 export default function Home() {
-  const defBgClass = "bg-cover bg-center w-full h-full flex flex-col snap-start snap-always justify-end z-09"
+  const defBgClass = "bg-cover bg-center w-full h-full flex flex-col snap-start snap-always justify-end overflow-x-hidden"
   return (
-    <div className="bg-green-300 w-full h-screen flex flex-col font-montserrat relative">
+    <div className="bg-green-300 w-full h-screen flex flex-col font-montserrat relative overflow-x-hidden">
       <Header/>
-
       <div id="mainContainer"
-        className="relative h-full snap-y snap-mandatory overflow-y-scroll no-scrollbar scroll-smooth">
+        className="relative h-full w-full snap-y snap-mandatory overflow-y-scroll no-scrollbar scroll-smooth overflow-x-hidden">
         <VideoTag />
         <UIFrame
           id="expertGuidance"
@@ -37,8 +38,17 @@ export default function Home() {
           bgClass={defBgClass + ' bg-[url(/mexico.jpg)]'}
           title="Elevated Experience"
           mainText="Gain access to exclusive perks, VIP check-ins, premium reservations, and curated experiences that take your trip from special to spectacular."
+          link="#planTrip"
+          isArrowDown={true} />
+          <UIFrame
+          id="planTrip"
+          bgClass={defBgClass + ' bg-[url(/greece.jpg)]'}
+          title="Plan My Trip"
+          mainText="Travel is more than just visiting a place—it’s about creating memories that last a lifetime. Let us take the stress out of planning and transform every journey into an unforgettable experience. Whether you’re exploring magical theme parks, cruising in luxury, or unwinding at a world-class resort, we handle the details so you can focus on the moments that matter most. Contact us for a personalized consultation and discover how effortless and extraordinary travel can be."
           link="#video+tag"
           isArrowDown={false} />
+          {/* <TripForm /> */}
+        <Footer />
       </div>
     </div>
 );
