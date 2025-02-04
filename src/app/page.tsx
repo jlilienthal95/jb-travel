@@ -2,7 +2,6 @@ import Header from './components/header'
 import VideoTag from './components/videoTag';
 import UIFrame from './components/UIFrame';
 import Footer from './components/footer';
-import TripForm from './components/tripForm';
 
 export default function Home() {
   const defBgClass = "bg-cover bg-center w-full h-full flex flex-col snap-start snap-always justify-end overflow-x-hidden"
@@ -47,7 +46,6 @@ export default function Home() {
           mainText="Travel is more than just visiting a place—it’s about creating memories that last a lifetime. Let us take the stress out of planning and transform every journey into an unforgettable experience. Whether you’re exploring magical theme parks, cruising in luxury, or unwinding at a world-class resort, we handle the details so you can focus on the moments that matter most. Contact us for a personalized consultation and discover how effortless and extraordinary travel can be."
           link="#video+tag"
           isArrowDown={false} />
-          {/* <TripForm /> */}
         <Footer />
       </div>
     </div>
