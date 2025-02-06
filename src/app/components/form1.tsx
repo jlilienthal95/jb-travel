@@ -1,30 +1,34 @@
 import { formProps } from "./tripFrame"
 
-export default function form1({labelClass, inputClass}: formProps) {
+export default function form1({labelClass, inputClass, handleChange}: formProps) {
     return(
         <>
             <div className="max-w-lg w-full">
-                <label htmlFor="first-name" className={labelClass}>First Name</label>
+                <label htmlFor="fName" className={labelClass}>First Name</label>
                 <div className="mt-2">
                     <input
+                        id="fName"
+                        name="fName"
                         type="text"
-                        name="first-name"
-                        id="first-name"
                         autoComplete="given-name"
+                        required
                         className={inputClass}
+                        onChange={handleChange}
                     />
                 </div>
             </div>
 
             <div className="max-w-lg w-full mt-2">
-                <label htmlFor="last-name" className={labelClass}>Last Name</label>
+                <label htmlFor="lName" className={labelClass}>Last Name</label>
                 <div className="mt-2">
                     <input
+                        id="lName"
+                        name="lName"
                         type="text"
-                        name="last-name"
-                        id="last-name"
                         autoComplete="family-name"
+                        required
                         className={inputClass}
+                        onChange={handleChange}
                     />
                 </div>
             </div>
@@ -35,10 +39,11 @@ export default function form1({labelClass, inputClass}: formProps) {
                     <input
                         id="email"
                         name="email"
-                        type="email"
+                        type="text"
                         autoComplete="email"
                         required
                         className={inputClass}
+                        onChange={handleChange}
                     />
                 </div>
             </div>
@@ -49,23 +54,25 @@ export default function form1({labelClass, inputClass}: formProps) {
                     <input
                         id="phone"
                         name="phone"
-                        type="email"
-                        autoComplete="email"
+                        type="text"
+                        autoComplete="phone"
                         required
                         className={inputClass}
+                        onChange={handleChange}
                     />
                 </div>
             </div>
-
             <div className="max-w-lg w-full mt-2">
-                <label htmlFor="address" className={labelClass}>Street Address</label>
+                <label htmlFor="address" className={labelClass}>Street Address - include City, State, and Country</label>
                 <div className="mt-2">
                     <input
-                        type="text"
-                        name="address"
                         id="address"
+                        name="address"
+                        type="text"
                         autoComplete="street-address"
+                        required
                         className={inputClass}
+                        onChange={handleChange}
                     />
                 </div>
             </div>

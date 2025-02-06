@@ -34,11 +34,11 @@ export default function Header() {
                 </div>
                 <div id="buttonContainer" className='flex flew-row md:gap-5 gap-3'>
                     <Link href="#planTrip">
-                        <button className='rounded-xl border-2 border-black border-opacity-30 p-4 my-8 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40'>
+                        <button className='text-sm md:text-md rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40 '>
                             Plan My Trip
                         </button>
                     </Link>
-                    <button className='rounded-xl border-2 border-black border-opacity-30 p-4 my-8 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40'>
+                    <button className='text-sm md:text-md rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40'>
                         Login
                     </button>
                 </div>

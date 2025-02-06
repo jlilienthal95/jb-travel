@@ -1,7 +1,8 @@
+"use client"
 import Form1 from "./form1";
 import Form2 from "./form2";
 import Form3 from "./form3";
-import { useState, Dispatch, SetStateAction } from 'react';
+import { useState, Dispatch, SetStateAction, useEffect } from 'react';
 // import { RiArrowUpWideLine } from "react-icons/ri"
 
 type tripFrameProps = {
@@ -12,7 +13,7 @@ type tripFrameProps = {
 export type formProps = {
     labelClass?: string,
     inputClass?: string,
-    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+    handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
 }
 
 export default function TripFrame({step, setStep}:tripFrameProps) {
@@ -24,7 +25,10 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
         lName: "",
         email: "",
         phone: "",
-        contactPref: [],
+        address: "",
+        prefEmail: "off",
+        prefPhone: "off",
+        prefText: "off",
         tripDetails: "",
         travelers: [],
         tripType: "",
@@ -44,18 +48,24 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
         setStep((prev) => prev - 1);
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
     };
 
-    console.log("current step (TripFrame):", step)
+    useEffect(() => {
+        console.log("Updated formData:", formData);
+    }, [formData]);
+
     return (
         <div id="planTrip" className="bg-cover bg-center w-full h-full flex flex-col snap-start snap-always justify-end overflow-x-hidden bg-[url(/greece.jpg)]">
             <div className="w-full h-1/2 bg-gradient-to-t from-black via-black/100 to-transparent flex justify-center overflow-x-hidden">
             </div>
             <div className='w-full absolute'>
                 <div className="w-fit max-w-xl text-white md:text-2xl sm:text-lg text-md ml-auto mr-auto mb-[10vh] items-center flex flex-col">
-                    <form className="bg-white p-5 rounded-xl min-w-[500px]">
+                    <form className="bg-white p-5 rounded-xl min-w-[450px]">
                         <div className="border-b border-gray-900/10 pb-12 min-w-5xl">
                             <h2 className="text-base font-semibold text-gray-900">Your Next Adventure</h2>  
                             <div className="flex flex-col mt-6 items-center">
