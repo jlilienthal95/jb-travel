@@ -2,80 +2,73 @@ import { formProps } from "./tripFrame"
 
 export default function form1({labelClass, inputClass, handleChange}: formProps) {
     return(
-        <>
+        <div className="flex flex-col flex-grow justify-between">
             <div className="max-w-lg w-full">
-                <label htmlFor="fName" className={labelClass}>First Name</label>
+                <label htmlFor="destination" className={labelClass}>Desired Destination(s)</label>
                 <div className="mt-2">
                     <input
-                        id="fName"
-                        name="fName"
+                        id="destination"
+                        name="destination"
                         type="text"
-                        autoComplete="given-name"
                         required
                         className={inputClass}
                         onChange={handleChange}
                     />
+                </div>
+            </div>
+            <div className="flex flex-col mt-4">
+                <label className={labelClass}>Travel Dates</label>
+    
+                <div className="flex flex-col gap-4 mt-2">
+                    <div className="flex flex-col">
+                        <label htmlFor="travelDateStart" className="text-sm text-gray-700">Start Date</label>
+                        <input
+                            type="date"
+                            id="travelDateStart"
+                            name="travelDateStart"
+                            className={inputClass}
+                            onChange={handleChange}
+                        />
+                    </div>
+
+                    <div className="flex flex-col">
+                        <label htmlFor="travelDateEnd" className="text-sm text-gray-700">End Date</label>
+                        <input
+                            type="date"
+                            id="travelDateEnd"
+                            name="travelDateEnd"
+                            className={inputClass}
+                            onChange={handleChange}
+                        />
+                    </div>
                 </div>
             </div>
 
-            <div className="max-w-lg w-full mt-2">
-                <label htmlFor="lName" className={labelClass}>Last Name</label>
-                <div className="mt-2">
+            <fieldset className="flex flex-col items-start">
+                <legend className={labelClass}>Are Your Travel Dates Flexible?</legend>
+                <div className="flex flex-row gap-4 mt-2">
                     <input
-                        id="lName"
-                        name="lName"
-                        type="text"
-                        autoComplete="family-name"
-                        required
+                        type="radio"
+                        id="yes"
+                        name="isFlexible"
+                        value="Yes"
                         className={inputClass}
                         onChange={handleChange}
                     />
+                    <label htmlFor="yes" className={labelClass}>Yes</label>
                 </div>
-            </div>
-
-            <div className="max-w-lg w-full mt-2">
-                <label htmlFor="email" className={labelClass}>Email Address</label>
-                <div className="mt-2">
+                <div className="flex flex-row gap-4 mt-2">
                     <input
-                        id="email"
-                        name="email"
-                        type="text"
-                        autoComplete="email"
-                        required
+                        type="radio"
+                        id="no"
+                        value="No"
+                        name="isFlexible"
                         className={inputClass}
                         onChange={handleChange}
                     />
+                    <label htmlFor="no"className={labelClass}>No</label>
                 </div>
-            </div>
-
-            <div className="max-w-lg w-full mt-2">
-                <label htmlFor="phone" className={labelClass}>Phone Number</label>
-                <div className="mt-2">
-                    <input
-                        id="phone"
-                        name="phone"
-                        type="text"
-                        autoComplete="phone"
-                        required
-                        className={inputClass}
-                        onChange={handleChange}
-                    />
-                </div>
-            </div>
-            <div className="max-w-lg w-full mt-2">
-                <label htmlFor="address" className={labelClass}>Street Address - include City, State, and Country</label>
-                <div className="mt-2">
-                    <input
-                        id="address"
-                        name="address"
-                        type="text"
-                        autoComplete="street-address"
-                        required
-                        className={inputClass}
-                        onChange={handleChange}
-                    />
-                </div>
-            </div>
-        </>
+            </fieldset>
+        </div>
     )
 }

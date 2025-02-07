@@ -1,53 +1,72 @@
 import { formProps } from "./tripFrame"
 
-export default function form2({labelClass, handleChange}: formProps) {
+export default function form2({labelClass, inputClass, handleChange}: formProps) {
     return(
-        <>
-            <fieldset className="max-w-lg w-full">
-                <div className="gap-x-4">
-                    <label className={labelClass}>Preferred  Method</label>
-                    <div className="flex flex-row items-center gap-2 mt-2">
-                        <input
-                            type="checkbox"
-                            name="prefEmail"
-                            id="prefEmail"
-                            onChange={handleChange}
-                        />
-                        <label htmlFor="prefEmail" className={labelClass}>Email</label>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                        <input
-                            type="checkbox"
-                            name="prefPhone"
-                            id="prefPhone"
-                            onChange={handleChange}
-                        />
-                        <label htmlFor="prefPhone" className={labelClass}>Phone</label>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                        <input
-                            type="checkbox"
-                            name="prefText"
-                            id="prefText"
-                            onChange={handleChange}
-                        />
-                        <label htmlFor="prefText" className={labelClass}>Text</label>
-                    </div>
-                </div>
-            </fieldset>
-
-            <div className="max-w-lg w-full mt-2">
-                <label htmlFor="tripDetails" className={labelClass}>Trip Details</label>
+        <div className="flex flex-col flex-grow justify-between">
+            <div className="max-w-lg w-full">
+                <label htmlFor="budget" className={labelClass}>What is your budget?</label>
                 <div className="mt-2">
-                    <textarea
-                        name="tripDetails"
-                        rows={3}
-                        id="tripDetails"
-                        className="bg-slate-100 block w-full rounded-md px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600 sm:text-sm"
+                    <input
+                        id="budget"
+                        name="budget"
+                        type="text"
+                        required
+                        className={inputClass}
                         onChange={handleChange}
                     />
                 </div>
             </div>
-        </>
+
+            <fieldset className="flex flex-col items-start">
+                <legend className={labelClass}>Budget is Total or Per Person?</legend>
+                <div className="flex flex-row gap-4 mt-4">
+                    <input
+                        type="radio"
+                        id="total"
+                        value="Total"
+                        name="budgetIsTotal"
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="total" className={labelClass}>Total</label>
+                </div>
+                <div className="flex flex-row gap-4 mt-2">
+                    <input
+                        type="radio"
+                        id="perPerson"
+                        value="perPerson"
+                        name="budgetIsTotal"
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="perPerson"className={labelClass}>Per Person</label>
+                </div>
+            </fieldset>
+
+            <div className="max-w-lg w-full mt-2">
+                <label htmlFor="roomTypePref" className={labelClass}>Preferred Accomodations</label>
+                <div className="mt-2">
+                    <input
+                        id="roomTypePref"
+                        name="roomTypePref"
+                        type="text"
+                        required
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
+            </div>
+            <div className="max-w-lg w-full mt-2">
+                <label htmlFor="specialRequests" className={labelClass}>Special Requests or Needs</label>
+                <div className="mt-2">
+                    <input
+                        id="specialRequests"
+                        name="specialRequests"
+                        type="text"
+                        required
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
+            </div>
+        </div>
     )
 }

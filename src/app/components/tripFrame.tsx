@@ -2,6 +2,8 @@
 import Form1 from "./form1";
 import Form2 from "./form2";
 import Form3 from "./form3";
+import Form4 from "./form4";
+import Form5 from "./form5";
 import { useState, Dispatch, SetStateAction, useEffect } from 'react';
 // import { RiArrowUpWideLine } from "react-icons/ri"
 
@@ -21,6 +23,17 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
     const inputClass = "block w-full rounded-md bg-slate-100 px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600 sm:text-sm"
 
     const [ formData, setFormData ] = useState({
+        destination: "",
+        travelDateStart: "",
+        travelDateEnd: "",
+        isFlexible: "Yes",
+        budget: "",
+        budgetIsTotal: "Yes",
+        roomTypePref: "",
+        specialRequests: "",
+        activityPref: "",
+        flightAssistance: "No",
+        anythingElse: "",
         fName: "",
         lName: "",
         email: "",
@@ -29,15 +42,8 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
         prefEmail: "off",
         prefPhone: "off",
         prefText: "off",
-        tripDetails: "",
         travelers: [],
         tripType: "",
-        destination: "",
-        travelDates: "",
-        isFlexible: false,
-        budget: "",
-        roomTypePref: "",
-        activityPref: "",
     })
 
     const nextStep = () => {
@@ -65,39 +71,48 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
             </div>
             <div className='w-full absolute'>
                 <div className="w-fit max-w-xl text-white md:text-2xl sm:text-lg text-md ml-auto mr-auto mb-[10vh] items-center flex flex-col">
-                    <form className="bg-white p-5 rounded-xl min-w-[450px]">
-                        <div className="border-b border-gray-900/10 pb-12 min-w-5xl">
-                            <h2 className="text-base font-semibold text-gray-900">Your Next Adventure</h2>  
-                            <div className="flex flex-col mt-6 items-center">
-                                {step === 1 && (
-                                    <Form1 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange}/>
-                                )}
-                                {step === 2 && (
-                                    <Form2 labelClass={labelClass} handleChange={handleChange} />
-                                )}
-                                {step === 3 && (
-                                    <Form3 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
-                                )}
+                    <form className="bg-white p-5 rounded-xl min-w-[450px] min-h-[600px] flex flex-col flex-grow h-full">
+                        <div className="flex flex-col flex-grow justify-between">
+                            <div className="min-w-5xl flex flex-col flex-grow">
+                                <h2 className="text-base font-semibold text-gray-900">Your Next Adventure</h2>  
+                                <div className="mt-6 mb-6 flex flex-col flex-grow">
+                                    {step === 1 && (
+                                        <Form1 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange}/>
+                                    )}
+                                    {step === 2 && (
+                                        <Form2 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                    )}
+                                    {step === 3 && (
+                                        <Form3 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                    )}
+                                    {step === 4 && (
+                                        <Form4 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                    )}
+                                    {step === 5 && (
+                                        <Form5 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                    )}
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="mt-8 flex justify-center gap-x-6">
-                            {step > 1 &&(
-                            <button
-                                type="button"
-                                onClick={prevStep}
-                                className="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700"
-                            >
-                                Previous
-                            </button>
-                            )}
-                            <button
-                                type="button"
-                                onClick={nextStep}
-                                className="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700"
-                            >
-                                Next
-                            </button>
+                            <div className="flex justify-center gap-x-6 pt-4 border-t border-gray-900/10">
+                                {step > 1 &&(
+                                <button
+                                    type="button"
+                                    onClick={prevStep}
+                                    className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
+                                >
+                                    Previous
+                                </button>
+                                )}
+                                <button
+                                    type="button"
+                                    onClick={nextStep}
+                                    className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
+                                >
+                                    Next
+                                </button>
+
+                            </div>
                         </div>
                     </form>
                 {/* <RiArrowUpWideLine className="text-3xl md:text-4xl lg:text-5xl hover:text-white text-gray-400" /> */}

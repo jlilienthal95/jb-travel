@@ -3,7 +3,7 @@ export default function Footer() {
     const logoClass = "max-w-[6vw] h-2/3 object-contain"
     return(
         <div id="footer" className="flex flex-row w-full h-1/3 snap-start snap-always bg-white">
-            <div id="presenting" className="flex flex-row h-full w-2/3 gap-10 items-end bg-red-400">
+            <div id="presenting" className="flex flex-row h-full w-2/3 gap-6 items-end bg-red-400">
                 <img alt="Disney Logo" src="/presenting/disneylogo.gif" className={logoClass}></img>
                 <img alt="Disney Travel Logo"  src="/presenting/Walt_Disney_travel.png" className={logoClass}></img>
                 <img alt="Universal Logo" src="/presenting/UPRV-Logo-2018.jpg" className={logoClass}></img>
