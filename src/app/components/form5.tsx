@@ -1,6 +1,6 @@
-import { formProps } from "./tripFrame"
+import { FormPropsType } from "./tripFrame"
 
-export default function form4({labelClass, handleChange}: formProps) {
+export default function form5({labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around">
             <fieldset className="max-w-lg w-full">
@@ -35,15 +35,58 @@ export default function form4({labelClass, handleChange}: formProps) {
                     </div>
                 </div>
             </fieldset>
-
-            <div className="max-w-lg w-full mt-2">
-                <label htmlFor="tripDetails" className={labelClass}>Trip Details</label>
+            <div className="max-w-lg w-full">
+                <label htmlFor="address" className={labelClass}>Street Address</label>
                 <div className="mt-2">
-                    <textarea
-                        name="tripDetails"
-                        rows={3}
-                        id="tripDetails"
-                        className="bg-slate-100 block w-full rounded-md px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600 sm:text-sm"
+                    <input
+                        id="address"
+                        name="address"
+                        type="text"
+                        required
+                        autoComplete="address-line1"
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
+            </div>
+            <div className="max-w-lg w-full">
+                <label htmlFor="city" className={labelClass}>City</label>
+                <div className="mt-2">
+                    <input
+                        id="city"
+                        name="city"
+                        type="text"
+                        required
+                        autoComplete="address-level2"
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
+            </div>
+            <div className="max-w-lg w-full">
+                <label htmlFor="state" className={labelClass}>State</label>
+                <div className="mt-2">
+                    <input
+                        id="state"
+                        name="state"
+                        type="text"
+                        required
+                        autoComplete="address-level1"
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
+            </div>
+            <div className="max-w-lg w-full">
+                <label htmlFor="zip" className={labelClass}>Zip Code</label>
+                <div className="mt-2">
+                    <input
+                        id="zip"
+                        name="zip"
+                        type="text"
+                        required
+                        autoComplete="postal-code"
+                        className={inputClass}
                         onChange={handleChange}
                     />
                 </div>

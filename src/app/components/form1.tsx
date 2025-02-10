@@ -1,6 +1,6 @@
-import { formProps } from "./tripFrame"
+import { FormPropsType } from "./tripFrame"
 
-export default function form1({labelClass, inputClass, handleChange}: formProps) {
+export default function form1({labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-between">
             <div className="max-w-lg w-full">

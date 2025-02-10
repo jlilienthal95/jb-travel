@@ -1,24 +1,58 @@
 "use client"
+import { useState, Dispatch, SetStateAction, useEffect } from 'react';
 import Form1 from "./form1";
 import Form2 from "./form2";
 import Form3 from "./form3";
 import Form4 from "./form4";
 import Form5 from "./form5";
-import { useState, Dispatch, SetStateAction, useEffect } from 'react';
-// import { RiArrowUpWideLine } from "react-icons/ri"
+import Form6 from "./form6";
 
-type tripFrameProps = {
+
+type Traveler = {
+    fName: string;
+    lName: string;
+    dob: string;
+};
+
+export type TravelerObjectType = {
+    [travelerId: `traveler-${number}`] : Traveler
+}
+
+type FormDataType = {
+    destination: string,
+    travelDateStart: string,
+    travelDateEnd: string,
+    isFlexible: string,
+    budget: string,
+    budgetIsTotal: string,
+    roomTypePref: string,
+    specialRequests: string,
+    flightAssistance: string,
+    anythingElse: string,
+    fName: string,
+    lName: string,
+    email: string,
+    phone: string,
+    address: string,
+    prefEmail: string,
+    prefPhone: string,
+    prefText: string,
+    travelers: TravelerObjectType,
+}
+
+type TripFrameProps = {
     step: number,
     setStep: Dispatch<SetStateAction<number>>
 }
 
-export type formProps = {
+export type FormPropsType = {
     labelClass?: string,
     inputClass?: string,
     handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+    setFormData?: Dispatch<SetStateAction<FormDataType>>
 }
 
-export default function TripFrame({step, setStep}:tripFrameProps) {
+export default function TripFrame({step, setStep}:TripFrameProps) {
     const labelClass = "block text-sm font-medium text-gray-900"
     const inputClass = "block w-full rounded-md bg-slate-100 px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600 sm:text-sm"
 
@@ -31,7 +65,6 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
         budgetIsTotal: "Yes",
         roomTypePref: "",
         specialRequests: "",
-        activityPref: "",
         flightAssistance: "No",
         anythingElse: "",
         fName: "",
@@ -42,8 +75,7 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
         prefEmail: "off",
         prefPhone: "off",
         prefText: "off",
-        travelers: [],
-        tripType: "",
+        travelers: {},
     })
 
     const nextStep = () => {
@@ -59,6 +91,7 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
             ...formData,
             [e.target.name]: e.target.value,
         });
+        console.log('e.target', e.target.name);
     };
 
     useEffect(() => {
@@ -75,7 +108,7 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
                         <div className="flex flex-col flex-grow justify-between">
                             <div className="min-w-5xl flex flex-col flex-grow">
                                 <h2 className="text-base font-semibold text-gray-900">Your Next Adventure</h2>  
-                                <div className="mt-6 mb-6 flex flex-col flex-grow">
+                                <div className="mt-2 mb-2 flex flex-col flex-grow">
                                     {step === 1 && (
                                         <Form1 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange}/>
                                     )}
@@ -90,6 +123,9 @@ export default function TripFrame({step, setStep}:tripFrameProps) {
                                     )}
                                     {step === 5 && (
                                         <Form5 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                    )}
+                                    {step === 6 && (
+                                        <Form6 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} setFormData={setFormData}/>
                                     )}
                                 </div>
                             </div>

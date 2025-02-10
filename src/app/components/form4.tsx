@@ -1,74 +1,64 @@
-"use client"
-import { formProps } from "./tripFrame"
-import { useState } from 'react';
+import { FormPropsType } from "./tripFrame"
 
-export default function Form4({labelClass, inputClass}: formProps) {
-  function TravelerInfo() {
-    const [ travelers, setTravelers] = useState(1);
-    return (
-      <div className="flex flex-col flex-grow overflow-y-scroll">
-        {Array.from({ length: travelers }).map((_, index) => (
-          <div key={index}>
-            <div className="flex flex-col mt-4">
-              <label htmlFor="fName-1" className={labelClass}>First Name</label>
-              <input
-              type="text"
-              id="fName-1"
-              name="fName-1"
-              className={inputClass}
-              />
+export default function form4({labelClass, inputClass, handleChange}: FormPropsType) {
+    return(
+        <div className="flex flex-col flex-grow justify-around">
+            <div className="max-w-lg w-full">
+                <label htmlFor="fName" className={labelClass}>First Name</label>
+                <div className="mt-2">
+                    <input
+                        id="fName"
+                        name="fName"
+                        type="text"
+                        required
+                        autoComplete="first-name"
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
             </div>
-      
-            <div className="flex flex-col mt-4">
-                <label htmlFor="lName-1" className={labelClass}>Last Name</label>
-                <input
-                type="text"
-                id="lName-1"
-                name="lName-1"
-                className={inputClass}
-                />
+            <div className="max-w-lg w-full">
+                <label htmlFor="lName" className={labelClass}>Last Name</label>
+                <div className="mt-2">
+                    <input
+                        id="lName"
+                        name="lName"
+                        type="text"
+                        required
+                        autoComplete="family-name"
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
             </div>
-
-            <div className="flex flex-col mt-4">
-                <label htmlFor="travelDate-1" className={labelClass}>Date of Birth</label>
-                <input
-                type="date"
-                id="travelDate-1"
-                name="travelDate-1"
-                className={inputClass}
-                />
+            <div className="max-w-lg w-full">
+                <label htmlFor="email" className={labelClass}>Email Address</label>
+                <div className="mt-2">
+                    <input
+                        id="email"
+                        name="email"
+                        type="text"
+                        required
+                        autoComplete="email"
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
             </div>
-          </div>
-        ))}
-          <button
-            type="button"
-            onClick={() => setTravelers((prev) => prev + 1)}
-            className="mt-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          >
-          Add Traveler
-          </button>
-          <button
-            type="button"
-            className="mt-4 p-2 bg-red-600 text-white rounded hover:bg-red-700"
-          >
-            Delete Traveler
-          </button>
-      </div>
+            <div className="max-w-lg w-full">
+                <label htmlFor="phone" className={labelClass}>Phone Number</label>
+                <div className="mt-2">
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        required
+                        autoComplete="phone"
+                        className={inputClass}
+                        onChange={handleChange}
+                    />
+                </div>
+            </div>
+        </div>
     )
-  }
-    return (
-      <div className="flex flex-grow">
-        {/* Traveler 1 */}
-        <div className="max-w-lg flex flex-grow flex-col">
-            <h2 className="text-sm font-semibold text-gray-900">Who will be traveling?</h2>
-            <div className="flex flex-grow flex-row flex-wrap gap-2">
-              {TravelerInfo()}
-            </div>
-        </div>
-  
-        <div id="addTraveler" className="flex justify-center mt-6">
-        </div>
-      </div>
-    );
-  }
-  
+}
