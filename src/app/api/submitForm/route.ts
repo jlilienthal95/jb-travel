@@ -1,4 +1,4 @@
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request){
     try {
@@ -19,8 +19,6 @@ export async function POST(req: Request){
         subject: 'New Form Submission!',
         text: JSON.stringify(formData),
     };
-        console.log(process.env.EMAIL_USERNAME)
-        console.log(process.env.EMAIL_PASSWORD)
         await transporter.sendMail(mailOptions);
         return new Response(
             JSON.stringify({ message: 'Email sent successfully!' }),
