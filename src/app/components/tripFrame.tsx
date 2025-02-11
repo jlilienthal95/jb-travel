@@ -6,7 +6,7 @@ import Form3 from "./form3";
 import Form4 from "./form4";
 import Form5 from "./form5";
 import Form6 from "./form6";
-
+import Form7 from './form7';
 
 type Traveler = {
     fName: string;
@@ -96,7 +96,6 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
 
     const handleSubmit = async (data: FormDataType) => {
         console.log("handleSubmit formData:", data)
-
         try {
             const response = await fetch('/api/submitForm', {
                 method: 'POST',
@@ -107,9 +106,10 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
             });
     
             if (response.ok) {
-                alert('Email sent successfully!');
+                console.log('')
+                nextStep();
             } else {
-                alert('Failed to send email');
+                alert('Sorry about that... \nSomething went wrong. Please try again or contact us by phone at (727) 266-5282 or email at JBTravelCo@icloud.com.');
             }
         } catch (error) {
             console.error('Error:', error);
@@ -149,11 +149,15 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
                                     {step === 6 && (
                                         <Form6 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} setFormData={setFormData}/>
                                     )}
+                                    {step === 7 && (
+                                        <Form7/>
+                                    )}
+
                                 </div>
                             </div>
 
                             <div className="flex justify-center gap-x-6 pt-2 border-t border-gray-900/10">
-                                {step > 1 &&(
+                                {step > 1 && step < 7 &&(
                                 <button
                                     type="button"
                                     onClick={prevStep}

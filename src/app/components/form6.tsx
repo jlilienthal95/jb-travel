@@ -5,8 +5,9 @@ import { FormPropsType, TravelerObjectType } from './tripFrame';
 export default function Form6({ labelClass, inputClass, setFormData }: FormPropsType) {
   function handleTravelers(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     if (!setFormData) return;
-    const travelerKey = e.target.name as keyof TravelerObjectType;
 
+    const travelerKey = e.target.name as keyof TravelerObjectType;
+    
     setFormData((prev) => ({
       ...prev,
       travelers: {
@@ -18,8 +19,6 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
       },
     }));
     console.log('e.target.name', e.target.name);
-    // console.log('e.target.value:', e.target.value);
-    // console
   }
   // Limit the number of travelers to 4.
   const [travelers, setTravelers] = useState(1);

@@ -5,7 +5,7 @@ import { IoMdMail } from "react-icons/io";
 export default function Header() {
     return (
         <div id="header"
-            className="w-full flex items-center justify-around fixed top-0 z-10 max-h-30 overflow-x-hidden">
+            className="w-full flex items-center justify-around fixed top-0 z-10 py-4 max-h-30 overflow-x-hidden">
             <div className='absolute inset-0 bg-white opacity-65 z-0'></div>
             <Link href="#video+tag">
                 <img src="/sitelogo.png"
