@@ -3,7 +3,7 @@ import { FormPropsType } from "./tripFrame"
 export default function form2({labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around">
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="budget" className={labelClass}>What is your budget?</label>
                 <div className="mt-2">
                     <input
@@ -41,7 +41,7 @@ export default function form2({labelClass, inputClass, handleChange}: FormPropsT
                 </div>
             </fieldset>
 
-            <div className="max-w-lg w-full mt-2">
+            <div className="w-full mt-2">
                 <label htmlFor="roomTypePref" className={labelClass}>Preferred Accomodations</label>
                 <div className="mt-2">
                     <input
@@ -54,7 +54,7 @@ export default function form2({labelClass, inputClass, handleChange}: FormPropsT
                     />
                 </div>
             </div>
-            <div className="max-w-lg w-full mt-2">
+            <div className="w-full mt-2">
                 <label htmlFor="specialRequests" className={labelClass}>Special Requests or Needs</label>
                 <div className="mt-2">
                     <input

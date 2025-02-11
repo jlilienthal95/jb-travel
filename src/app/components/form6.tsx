@@ -18,7 +18,6 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
         },
       },
     }));
-    console.log('e.target.name', e.target.name);
   }
   // Limit the number of travelers to 4.
   const [travelers, setTravelers] = useState(1);
@@ -37,7 +36,7 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
   // This function returns the traveler cards.
   const TravelerInfo = () => {
     return (
-      <div className="grid grid-cols-2 gap-2 text-wrap max-w-[390px]">
+      <div className="grid grid-cols-2 gap-2 text-wrap">
         {Array.from({ length: travelers }).map((_, index) => (
           <div key={index} className="p-2 border border-gray-300 rounded-md">
             <div className="flex flex-col">

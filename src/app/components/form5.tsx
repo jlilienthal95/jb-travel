@@ -3,7 +3,7 @@ import { FormPropsType } from "./tripFrame"
 export default function form5({labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around">
-            <fieldset className="max-w-lg w-full">
+            <fieldset className="w-full">
                 <div className="gap-x-4">
                     <label className={labelClass}>Preferred Contact Method</label>
                     <div className="flex flex-row items-center gap-2 mt-2">
@@ -35,7 +35,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                     </div>
                 </div>
             </fieldset>
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="address" className={labelClass}>Street Address</label>
                 <div className="mt-2">
                     <input
@@ -49,7 +49,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                     />
                 </div>
             </div>
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="city" className={labelClass}>City</label>
                 <div className="mt-2">
                     <input
@@ -63,7 +63,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                     />
                 </div>
             </div>
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="state" className={labelClass}>State</label>
                 <div className="mt-2">
                     <input
@@ -77,7 +77,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                     />
                 </div>
             </div>
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="zip" className={labelClass}>Zip Code</label>
                 <div className="mt-2">
                     <input

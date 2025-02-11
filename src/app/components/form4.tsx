@@ -3,7 +3,7 @@ import { FormPropsType } from "./tripFrame"
 export default function form4({labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around">
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="fName" className={labelClass}>First Name</label>
                 <div className="mt-2">
                     <input
@@ -17,7 +17,7 @@ export default function form4({labelClass, inputClass, handleChange}: FormPropsT
                     />
                 </div>
             </div>
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="lName" className={labelClass}>Last Name</label>
                 <div className="mt-2">
                     <input
@@ -31,7 +31,7 @@ export default function form4({labelClass, inputClass, handleChange}: FormPropsT
                     />
                 </div>
             </div>
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="email" className={labelClass}>Email Address</label>
                 <div className="mt-2">
                     <input
@@ -45,7 +45,7 @@ export default function form4({labelClass, inputClass, handleChange}: FormPropsT
                     />
                 </div>
             </div>
-            <div className="max-w-lg w-full">
+            <div className="w-full">
                 <label htmlFor="phone" className={labelClass}>Phone Number</label>
                 <div className="mt-2">
                     <input
