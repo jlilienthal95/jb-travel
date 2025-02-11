@@ -53,7 +53,7 @@ export type FormPropsType = {
 }
 
 export default function TripFrame({step, setStep}:TripFrameProps) {
-    const labelClass = "block text-sm font-medium text-gray-900"
+    const labelClass = "block text-sm font-medium text-gray-900 text-wrap"
     const inputClass = "block w-full rounded-md bg-slate-100 px-3 py-1.5 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600 sm:text-sm"
 
     const [ formData, setFormData ] = useState({
@@ -91,11 +91,33 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
             ...formData,
             [e.target.name]: e.target.value,
         });
-        console.log('e.target', e.target.name);
+        // console.log('e.target', e.target.name);
+    };
+
+    const handleSubmit = async (data: FormDataType) => {
+        console.log("handleSubmit formData:", data)
+
+        try {
+            const response = await fetch('/api/submitForm', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ formData }),
+            });
+    
+            if (response.ok) {
+                alert('Email sent successfully!');
+            } else {
+                alert('Failed to send email');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while sending the email');
+        }
     };
 
     useEffect(() => {
-        console.log("Updated formData:", formData);
     }, [formData]);
 
     return (
@@ -104,11 +126,11 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
             </div>
             <div className='w-full absolute'>
                 <div className="w-fit max-w-xl text-white md:text-2xl sm:text-lg text-md ml-auto mr-auto mb-[10vh] items-center flex flex-col">
-                    <form className="bg-white p-5 rounded-xl min-w-[450px] min-h-[600px] flex flex-col flex-grow h-full">
+                    <form className="bg-white pt-5 px-5 pb-2 rounded-xl min-w-[430px] min-h-[600px] flex flex-col flex-grow h-full">
                         <div className="flex flex-col flex-grow justify-between">
                             <div className="min-w-5xl flex flex-col flex-grow">
                                 <h2 className="text-base font-semibold text-gray-900">Your Next Adventure</h2>  
-                                <div className="mt-2 mb-2 flex flex-col flex-grow">
+                                <div className="mb-2 flex flex-col flex-grow">
                                     {step === 1 && (
                                         <Form1 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange}/>
                                     )}
@@ -130,24 +152,34 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
                                 </div>
                             </div>
 
-                            <div className="flex justify-center gap-x-6 pt-4 border-t border-gray-900/10">
+                            <div className="flex justify-center gap-x-6 pt-2 border-t border-gray-900/10">
                                 {step > 1 &&(
                                 <button
                                     type="button"
                                     onClick={prevStep}
-                                    className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
+                                    className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 md:px-2 py-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
                                 >
                                     Previous
                                 </button>
                                 )}
-                                <button
-                                    type="button"
-                                    onClick={nextStep}
-                                    className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
-                                >
-                                    Next
-                                </button>
-
+                                {step < 6 &&(
+                                    <button
+                                        type="button"
+                                        onClick={nextStep}
+                                        className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 md:px-5 py-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
+                                    >
+                                        Next
+                                    </button>
+                                )}
+                                {step === 6 &&(
+                                    <button
+                                        type="button"
+                                        onClick={() => handleSubmit(formData)}
+                                        className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 md:px-5 py-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
+                                    >
+                                        Submit
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </form>

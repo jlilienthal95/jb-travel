@@ -2,7 +2,7 @@ import { FormPropsType } from "./tripFrame"
 
 export default function form3({labelClass, inputClass, handleChange}: FormPropsType) {
     return(
-        <div className="flex flex-col flex-grow justify-between">
+        <div className="flex flex-col flex-grow justify-around text-wrap max-w-[390px]">
             <div className="max-w-lg w-full">
                 <label htmlFor="specialRequests" className={labelClass}> Are There Specific Attractions or Experiences You Want Included?</label>
                 <div className="mt-2">

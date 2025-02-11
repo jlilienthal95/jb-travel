@@ -2,7 +2,7 @@ import { FormPropsType } from "./tripFrame"
 
 export default function form1({labelClass, inputClass, handleChange}: FormPropsType) {
     return(
-        <div className="flex flex-col flex-grow justify-between">
+        <div className="flex flex-col flex-grow justify-around">
             <div className="max-w-lg w-full">
                 <label htmlFor="destination" className={labelClass}>Desired Destination(s)</label>
                 <div className="mt-2">
@@ -16,7 +16,7 @@ export default function form1({labelClass, inputClass, handleChange}: FormPropsT
                     />
                 </div>
             </div>
-            <div className="flex flex-col mt-4">
+            <div className="flex flex-col">
                 <label className={labelClass}>Travel Dates</label>
     
                 <div className="flex flex-col gap-4 mt-2">

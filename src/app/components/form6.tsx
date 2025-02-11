@@ -38,7 +38,7 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
   // This function returns the traveler cards.
   const TravelerInfo = () => {
     return (
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-2 text-wrap max-w-[390px]">
         {Array.from({ length: travelers }).map((_, index) => (
           <div key={index} className="p-2 border border-gray-300 rounded-md">
             <div className="flex flex-col">
@@ -78,7 +78,7 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
   };
 
   return (
-    <div className="flex flex-col flex-grow justify-between">
+    <div className="flex flex-col flex-grow justify-between items-center">
       <div className="space-y-2">
         <h2 className="text-xl font-semibold text-gray-900">Who will be traveling?</h2>
         {/* Traveler grid container: This will only show 4 traveler cards max, laid out in 2 columns */}
@@ -86,12 +86,12 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
           {TravelerInfo()}
         </div>
     </div>
-      <div className="flex justify-center gap-x-4">
+      <div className="flex gap-x-2">
         {travelers < 4 && (
           <button
             type="button"
             onClick={addTraveler}
-            className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700"
+            className="bg-indigo-600 text-white text-sm sm:text-md px-4 py-2 rounded-md hover:bg-indigo-700"
           >
             Add Traveler
           </button>
@@ -100,7 +100,7 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
           <button
             type="button"
             onClick={deleteTraveler}
-            className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700"
+            className="bg-red-600 text-white text-sm sm:text-md px-4 py-2 rounded-md hover:bg-red-700"
           >
             Delete Traveler
           </button>

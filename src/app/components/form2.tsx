@@ -2,7 +2,7 @@ import { FormPropsType } from "./tripFrame"
 
 export default function form2({labelClass, inputClass, handleChange}: FormPropsType) {
     return(
-        <div className="flex flex-col flex-grow justify-between">
+        <div className="flex flex-col flex-grow justify-around">
             <div className="max-w-lg w-full">
                 <label htmlFor="budget" className={labelClass}>What is your budget?</label>
                 <div className="mt-2">
