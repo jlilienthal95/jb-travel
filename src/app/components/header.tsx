@@ -5,7 +5,7 @@ import { IoMdMail } from "react-icons/io";
 export default function Header() {
     return (
         <div id="header"
-            className="w-full flex items-center justify-around fixed top-0 z-10 md:py-2 py-4 max-h-30 overflow-x-hidden">
+            className="w-full flex items-center justify-around fixed top-0 z-10 md:py-2 py-4 px-2 max-h-30 overflow-x-hidden">
             <div className='absolute inset-0 bg-white opacity-65 z-0'></div>
             <Link href="#video+tag">
                 <img src="/sitelogo.png"
@@ -34,11 +34,11 @@ export default function Header() {
                 </div>
                 <div id="buttonContainer" className='flex flew-row md:gap-5 gap-3'>
                     <Link href="#planTrip">
-                        <button className='text-sm md:text-md rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40'>
+                        <button className='text-sm md:text-md rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40 text-nowrap'>
                             Plan My Trip
                         </button>
                     </Link>
-                    <button className='text-sm md:text-md rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40'>
+                    <button className='text-sm md:text-md rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40 text-nowrap'>
                         Login
                     </button>
                 </div>
