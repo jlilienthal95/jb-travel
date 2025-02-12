@@ -4,11 +4,11 @@ export default function form3({labelClass, inputClass, handleChange}: FormPropsT
     return(
         <div className="flex flex-col flex-grow justify-around text-wrap">
             <div className="w-full">
-                <label htmlFor="specialRequests" className={labelClass}> Are There Specific Attractions or Experiences You Want Included?</label>
+                <label htmlFor="attractions" className={labelClass}> Are There Specific Attractions or Experiences You Want Included?</label>
                 <div className="mt-2">
                     <input
-                        id="specialRequests"
-                        name="specialRequests"
+                        id="attractions"
+                        name="attractions"
                         type="text"
                         required
                         className={inputClass}

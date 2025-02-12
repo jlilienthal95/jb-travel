@@ -9,7 +9,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                     <div className="flex flex-row items-center gap-2 mt-2">
                         <input
                             type="checkbox"
-                            name="prefEmail"
+                            name="prefContact"
                             id="prefEmail"
                             onChange={handleChange}
                         />
@@ -18,7 +18,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                     <div className="flex flex-row items-center gap-2">
                         <input
                             type="checkbox"
-                            name="prefPhone"
+                            name="prefContact"
                             id="prefPhone"
                             onChange={handleChange}
                         />
@@ -27,7 +27,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                     <div className="flex flex-row items-center gap-2">
                         <input
                             type="checkbox"
-                            name="prefText"
+                            name="prefContact"
                             id="prefText"
                             onChange={handleChange}
                         />

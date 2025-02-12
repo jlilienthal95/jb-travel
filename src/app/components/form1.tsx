@@ -46,24 +46,24 @@ export default function form1({labelClass, inputClass, handleChange}: FormPropsT
 
             <fieldset className="flex flex-col items-start">
                 <legend className={labelClass}>Are Your Travel Dates Flexible?</legend>
-                <div className="flex flex-row gap-4 mt-2">
+                <div className="flex flex-row gap-2 mt-2 items-center">
                     <input
                         type="radio"
                         id="yes"
                         name="isFlexible"
                         value="Yes"
-                        className={inputClass}
+                        className="w-4 h-4 appearance-none border-2 border-black rounded-full grid place-content-center checked:bg-black"
                         onChange={handleChange}
                     />
                     <label htmlFor="yes" className={labelClass}>Yes</label>
                 </div>
-                <div className="flex flex-row gap-4 mt-2">
+                <div className="flex flex-row gap-2 mt-2 items-center">
                     <input
                         type="radio"
                         id="no"
                         value="No"
                         name="isFlexible"
-                        className={inputClass}
+                        className="w-4 h-4 appearance-none border-2 border-black rounded-full grid place-content-center checked:bg-black"
                         onChange={handleChange}
                     />
                     <label htmlFor="no"className={labelClass}>No</label>
