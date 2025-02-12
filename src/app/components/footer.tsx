@@ -5,10 +5,10 @@ import { FaCheck } from "react-icons/fa";
 export default function Footer() {
     const logoClass = "max-w-[8vw] object-contain"
     return(
-        <div id="footer" className="flex md:flex-row flex-col w-full h-1/2 snap-start snap-always bg-white py-10 text-sm">
+        <div id="footer" className="flex md:flex-row flex-col w-full h-1/2 snap-start snap-always bg-white py-10 md:text-lg text-sm">
             <div className="flex flex-col h-full w-full md:w-2/3 gap-2 items-center">
                 <div className="border-b-2 pb-1 w-2/3 place-items-center">
-                    <div className="text-black md:text-xl">
+                    <div className="text-black md:text-xl text-center">
                         Proudly Representing
                     </div>
                 </div>
@@ -25,11 +25,11 @@ export default function Footer() {
                 </div>
             </div>
             <div className="flex flex-col h-full w-full md:w-1/3 justify-between text-gray-700 px-16">
-                <div className="flex flex-col h-full items-center justify-center gap-y-4">
-                    <div className="">
+                <div className="flex flex-col h-full items-center justify-center gap-y-4 md:mt-0 mt-2 md:border-t-0 border-t-2">
+                    <div>
                         J. Brescia Travel Co.
                     </div>
-                    <div id="contactInfoCont" className="flex flex-col  items-center">
+                    <div id="contactInfoCont" className="flex flex-col items-center">
                         <div id="phone" className='flex items-center gap-2 hover:text-gray-400'>
                             {/* <Link href="tel:7272665282">
                                 <FaSquarePhone className="text-xl"/>
@@ -52,9 +52,9 @@ export default function Footer() {
                         An Independent Affiliate of A. S. A. P. Cruises Inc., Florida Seller of Travel Ref. No. ST15578 – Washington UBID No. 603189022
                     </div>
                 </div>
-                <div id="websiteBy" className="flex justify-end w-full">
-                    <div className="flex text-black font-bold text-sm items-end">
-                        <div className="flex flex-row items-end border-2 rounded-lg p-2">
+                <div id="websiteBy" className="flex justify-end w-full text-sm">
+                    <div className="flex text-black font-bold xl:text-sm text-xs items-end">
+                        <div className="flex flex-row items-end border-2 rounded-lg md:p-2 p-1 min-w-72">
                             <span>Designed and Built by</span>
                             <a href="mailto:jilienthal@gmail.com" className="ml-1 flex items-center text-blue-500 hover:underline z-20">
                                 J.L. Software

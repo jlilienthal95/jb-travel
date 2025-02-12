@@ -39,7 +39,9 @@ export default function Header() {
                         </button>
                     </Link>
                     <button className='text-sm md:text-md rounded-xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40 text-nowrap'>
-                        Login
+                        <Link href="https://crm.myagentgenie.com/portal/login">
+                            Login
+                        </Link>
                     </button>
                 </div>
             </div>
