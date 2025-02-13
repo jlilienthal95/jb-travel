@@ -21,7 +21,7 @@ export default function form1({labelClass, inputClass, handleChange}: FormPropsT
     
                 <div className="flex flex-col gap-4 mt-2">
                     <div className="flex flex-col">
-                        <label htmlFor="travelDateStart" className="text-sm text-gray-700">Start Date</label>
+                        <label htmlFor="travelDateStart" className="text-md text-gray-700">Start Date</label>
                         <input
                             type="date"
                             id="travelDateStart"

@@ -5,7 +5,7 @@ import { FaCheck } from "react-icons/fa";
 export default function Footer() {
     const logoClass = "max-w-[8vw] object-contain"
     return(
-        <div id="footer" className="flex md:flex-row flex-col w-full h-1/2 snap-start snap-always bg-white py-10 md:text-lg text-sm">
+        <div id="footer" className="flex md:flex-row flex-col w-full h-1/2 snap-end snap-always bg-white py-10 md:text-lg text-sm">
             <div className="flex flex-col h-full w-full md:w-2/3 gap-2 items-center">
                 <div className="border-b-2 pb-1 w-2/3 place-items-center">
                     <div className="text-black md:text-xl text-center">
