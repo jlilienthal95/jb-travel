@@ -14,27 +14,6 @@
   }
 }
 
-@layer utilities {
-  @media (max-height: 500px) {
-    .center-on-small-height {
-      @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full;
-      @apply shadow-lg; /* Adds a shadow for contrast */
-      
-      /* Optionally, if the background is too bright, add a semi-transparent overlay */
-      background-color: rgba(0, 0, 0, 0.5); /* A dark transparent overlay for contrast */
-      padding: 1rem; /* Add some padding around text for better spacing */
-      border-radius: 8px; /* Optional: round the corners */
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-  }
-}
-
-@media (max-height: 800px) {
-  .hide-on-small-height {
-    display: none;
-  }
-}
 
 @font-face {
   font-family: montserrat;
