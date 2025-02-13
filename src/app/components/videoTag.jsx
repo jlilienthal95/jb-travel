@@ -9,7 +9,7 @@ export default function VideoTag(props) {
                 Not supported by your browser.
             </video>
             <video autoPlay muted loop playsInline className="md:hidden w-full h-full object-cover">
-                <source src="/JBThomeMob.mov" type="video/mp4"/>
+                <source src="/JBThomeMob.mp4" type="video/mp4"/>
                 Not supported by your browser.
             </video>
             <div className="w-full h-1/2 bg-gradient-to-t from-black via-black/80 to-transparent flex justify-center absolute">
