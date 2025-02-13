@@ -5,7 +5,6 @@ import UIFrame from './components/UIFrame';
 import Footer from './components/footer';
 import TripFrame from './components/tripFrame';
 import { useState, Suspense } from 'react';
-import Head from "next/head";
 
 export default function Home() {
   const [ step, setStep ] = useState(1);
@@ -15,9 +14,6 @@ export default function Home() {
   console.log("current step (home):", step)
   return (
     <div className="bg-white w-full h-screen flex flex-col font-montserrat relative overflow-x-hidden">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-      </Head>
       <Header/>
         <div id="mainContainer"
           className="relative h-full w-full snap-y snap-mandatory overflow-y-scroll no-scrollbar scroll-smooth overflow-x-hidden">
