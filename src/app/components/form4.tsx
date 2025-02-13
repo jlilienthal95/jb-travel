@@ -61,4 +61,4 @@ export default function form4({labelClass, inputClass, handleChange}: FormPropsT
             </div>
         </div>
     )
-}
+}  
