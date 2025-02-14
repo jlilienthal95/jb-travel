@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "J. Brescia Travel Co. - From Dream To Destination",
+  title: "J. Brescia Travel Co. | From Dream To Destination",
   description: "Discover stunning travel destinations and plan your next adventure - from Deam to Destination -  with expert tips and guides.",
   icons: "/favicon.png",
 };

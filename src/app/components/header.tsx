@@ -8,7 +8,7 @@ export default function Header() {
             className="w-full flex items-center justify-around fixed top-0 z-10 md:py-2 py-4 px-2 max-h-30 overflow-x-hidden">
             <div className='absolute inset-0 bg-white opacity-65 z-0'></div>
             <Link href="#video+tag">
-                <img src="/sitelogo.png"
+                <img src="/JBTC-Logo-v2.png"
                     alt="J. Brescia Travel Co."
                     className="max-h-16 sm:max-h-20 md:max-h-28 w-auto relative z-10 hover:opacity-60">
                 </img>
