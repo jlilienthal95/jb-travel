@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { FaCheck } from "react-icons/fa";
-
+import Image from "next/image"
 
 export default function Footer() {
     const logoClass = "md:max-w-[8vw] h-fit object-contain"
@@ -14,15 +14,15 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="md:grid md:grid-cols-3 md:auto-rows-fr md:overflow-hidden md:gap-0 gap-20 md:animate-none h-full w-full place-items-center flex animate-scroll">
-                            <img alt="Disney Logo" src="/presenting/disneylogo.gif" className={logoClass}></img>
-                            <img alt="Disney Travel Logo"  src="/presenting/Walt_Disney_travel.png" className={logoClass}></img>
-                            <img alt="Universal Logo" src="/presenting/UPRV-Logo-2018.jpg" className={logoClass}></img>
-                            <img alt="Apple Vacations Logo" src="/presenting/apple-vacations.webp" className={logoClass}></img>
-                            <img alt="Seabourn Logo" src="/presenting/seabournlogo.gif" className={logoClass}></img>
-                            <img alt="Carnival Logo" src="/presenting/carnivallogo.jpg" className={logoClass}></img>
-                            <img alt="Viking Ocean Cruises Logo" src="/presenting/viking-ocean-cruises.jpg" className={logoClass}></img>
-                            <img alt="Legoland Logo" src="/presenting/legoland.png" className={logoClass}></img>
-                            <img alt="Palace Resorts Logo" src="/presenting/Palaceresorts.jpg" className={logoClass}></img>
+                        <Image alt="Disney Logo" src="/presenting/disneylogo.gif" className={logoClass} width={200} height={100} priority />
+                        <Image alt="Disney Travel Logo" src="/presenting/Walt_Disney_travel.png" className={logoClass} width={200} height={100} />
+                        <Image alt="Universal Logo" src="/presenting/UPRV-Logo-2018.jpg" className={logoClass} width={200} height={100} />
+                        <Image alt="Apple Vacations Logo" src="/presenting/apple-vacations.webp" className={logoClass} width={200} height={100} />
+                        <Image alt="Seabourn Logo" src="/presenting/seabournlogo.gif" className={logoClass} width={200} height={100} />
+                        <Image alt="Carnival Logo" src="/presenting/carnivallogo.jpg" className={logoClass} width={200} height={100} />
+                        <Image alt="Viking Ocean Cruises Logo" src="/presenting/viking-ocean-cruises.jpg" className={logoClass} width={200} height={100} />
+                        <Image alt="Legoland Logo" src="/presenting/legoland.png" className={logoClass} width={200} height={100} />
+                        <Image alt="Palace Resorts Logo" src="/presenting/Palaceresorts.jpg" className={logoClass} width={200} height={100} />
                     </div>
                 </div>
                 <div id="contact" className="flex flex-col h-full w-full md:w-1/3 justify-between text-gray-700 px-16">

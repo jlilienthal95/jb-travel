@@ -10,7 +10,7 @@ export default function Header() {
             <Link href="#video+tag">
                 <img src="/JBTC-Logo-v2Noborder.png"
                     alt="J. Brescia Travel Co."
-                    className="max-h-16 sm:max-h-20 md:max-h-28 w-auto relative z-10 hover:opacity-60">
+                    className="max-h-20 md:max-h-28 w-auto relative z-10 hover:opacity-60">
                 </img>
             </Link>
             <div id="contactAndButtons" className="text-black flex flex-row md:gap-8 gap-4 items-center justify-between relative z-10">
