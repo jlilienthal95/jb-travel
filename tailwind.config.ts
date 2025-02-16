@@ -23,6 +23,7 @@ export default {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        ramillas: ["Ramillas", "serif"]
       },
       spacing: {
         '1/6': '16.666667%',
