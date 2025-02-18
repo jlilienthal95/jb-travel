@@ -6,7 +6,7 @@ export default function Footer() {
     const logoClass = "md:max-w-[8vw] h-fit object-contain"
     return(
         <div id="footer" className="flex md:flex-row flex-col w-full h-full snap-end snap-always bg-white p-10 md:text-lg text-sm">
-            <div id="content" className="flex md:flex-row flex-col h-5/6 mt-24">
+            <div id="content" className="flex md:flex-row flex-col h-5/6 md:mt-24 mt-14">
                 <div id="presenting" className="flex flex-col h-full w-full md:w-2/3 gap-2 items-center overflow-hidden max-w-full">
                     <div className="border-b-2 pb-1 w-2/3 place-items-center">
                         <div className="text-black md:text-xl text-center">
@@ -25,7 +25,7 @@ export default function Footer() {
                         <Image alt="Palace Resorts Logo" src="/presenting/Palaceresorts.jpg" className={logoClass} width={200} height={100} />
                     </div>
                 </div>
-                <div id="contact" className="flex flex-col h-full w-full md:w-1/3 justify-between text-gray-700 px-16">
+                <div id="contact" className="flex flex-col h-full w-full md:w-1/3 justify-between text-gray-700 md:px-16">
                     <div className="flex flex-col h-full items-center justify-center gap-y-4 md:mt-0 mt-2 md:border-t-0 border-t-2">
                         <div>
                             J. Brescia Travel Co.
@@ -57,7 +57,7 @@ export default function Footer() {
                         <div className="flex text-slate-600 font-bold xl:text-sm text-xs items-end">
                             <div className="flex flex-row items-end border-2 border-black border-opacity-50 rounded-lg md:p-2 p-1 min-w-72 opacity-90">
                                 <span>Designed and Built by</span>
-                                <a href="mailto:jilienthal@gmail.com" className="ml-1 flex items-center text-blue-500 hover:underline z-20">
+                                <a href="mailto:JLDevWorks@gmail.com" className="ml-1 flex items-center text-blue-500 hover:underline z-20">
                                     J.L. DevWorks
                                     <FaCheck className="ml-2" />
                                 </a>
