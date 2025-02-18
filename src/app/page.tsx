@@ -13,7 +13,7 @@ export default function Home() {
 
   console.log("current step (home):", step)
   return (
-    <div className="bg-black w-full h-screen flex flex-col font-montserrat relative overflow-x-hidden">
+    <div className="bg-black w-full h-screen flex flex-col font-montserrat leading-loose relative overflow-x-hidden">
       <Header/>
         <div id="mainContainer"
           className="relative h-full w-full snap-y snap-mandatory overflow-y-scroll no-scrollbar scroll-smooth overflow-x-hidden">
