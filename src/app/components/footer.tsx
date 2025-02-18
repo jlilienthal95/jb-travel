@@ -6,7 +6,7 @@ export default function Footer() {
     const logoClass = "md:max-w-[8vw] h-fit object-contain"
     return(
         <div id="footer" className="flex md:flex-row flex-col w-full h-full snap-end snap-always bg-white p-10 md:text-lg text-sm">
-            <div id="content" className="flex md:flex-row flex-col h-5/6 md:mt-24 mt-16">
+            <div id="content" className="flex md:flex-row flex-col h-5/6 md:mt-24 mt-[4.5rem]">
                 <div id="presenting" className="flex flex-col h-full w-full md:w-2/3 gap-2 items-center overflow-hidden max-w-full">
                     <div className="border-b-2 pb-1 w-2/3 place-items-center">
                         <div className="text-black md:text-xl text-center">
