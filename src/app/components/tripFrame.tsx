@@ -226,7 +226,6 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
                             </div>
                         </div>
                     </form>
-                {/* <RiArrowUpWideLine className="text-3xl md:text-4xl lg:text-5xl hover:text-white text-gray-400" /> */}
                 </div>
             </div>
         </div>

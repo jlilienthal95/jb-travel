@@ -27,7 +27,7 @@ export default function Footer() {
                         <Image alt="Palace Resorts Logo" src="/representing/palaceResortsLogo.png" className={logoClass} width={imgWidth} height={imgHeight} />
                     </div>
                 </div>
-                <div id="contact" className="flex flex-col h-full w-full md:w-1/3 justify-between text-gray-700 md:px-16">
+                <div id="contact" className="flex flex-col h-full w-full md:w-1/3 justify-between text-gray-700 xl:px-12 sm:px-0 px-16">
                     <div className="flex flex-col h-full items-center justify-center gap-y-4 md:mt-0 mt-2 md:border-t-0 border-t-2">
                         <div>
                             J. Brescia Travel Co.
