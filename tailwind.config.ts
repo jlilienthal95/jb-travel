@@ -9,12 +9,13 @@ export default {
   theme: {
     extend: {
       animation: {
-        scroll: 'scroll 20s linear infinite',
+        scroll: 'scroll 15s .5s linear infinite',
       },
       keyframes: {
         scroll: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-400%)' },
+          "0%": { transform: 'translateX(0%)' } ,
+          "50%": { transform: 'translateX(-300%)' } ,
+          "100%": { transform: 'translateX(0%)' } ,
         },
       },
       colors: {
