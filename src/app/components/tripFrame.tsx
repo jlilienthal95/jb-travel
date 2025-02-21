@@ -161,7 +161,7 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
 
     return (
         <div id="planTrip" className="relative flex flex-col flex-grow bg-cover bg-center w-full h-full snap-start snap-always justify-end overflow-x-hidden bg-[url(/greece.jpg)]">
-            <div className="flex w-full h-1/4 bg-gradient-to-t from-black via-black/100 to-transparent justify-center overflow-x-hidden"></div>
+            <div className="flex w-full h-1/4 bg-gradient-to-t from-slate-900 via-black/80 to-transparent justify-center overflow-x-hidden"></div>
             <div className='flex flex-grow w-full h-full absolute items-center justify-center'>
                 <div className="flex flex-col w-full h-[86%] md:h-5/6 text-white md:text-2xl sm:text-lg text-md ml-auto mr-auto mt-auto items-center pb-24 px-2">
                     {/* min-w-[410px] min-h-[600px]  */}

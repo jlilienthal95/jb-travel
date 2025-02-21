@@ -12,7 +12,7 @@ export default function VideoTag(props) {
                 <source src="/JBTHomeMob.mp4" type="video/mp4"/>
                 Not supported by your browser.
             </video>
-            <div className="w-full h-1/2 bg-gradient-to-t from-black via-black/80 to-transparent flex justify-center absolute">
+            <div className="w-full h-1/2 bg-gradient-to-t from-slate-900 via-black/80 to-transparent flex justify-center absolute">
                 <div className="max-w-5xl px-5 text-white md:text-2xl sm:text-lg text-md mt-auto mb-16 mx-5">
                     <span className="text-[clamp(1.5rem,5vw,3rem)] opacity-100">Luxury isn’t an upgrade—<span className="italic">
                     <br></br>it’s our standard.</span><br/></span>

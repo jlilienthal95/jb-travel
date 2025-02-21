@@ -24,7 +24,7 @@ export default function Footer() {
                         <Image alt="Carnival Logo" src="/representing/carnivallogo.jpg" className={logoClass} width={imgWidth} height={imgHeight} />
                         <Image alt="Viking Ocean Cruises Logo" src="/representing/viking-ocean-cruises.jpg" className={logoClass} width={imgWidth} height={imgHeight} />
                         <Image alt="Legoland Logo" src="/representing/legoland.png" className={logoClass} width={imgWidth} height={imgHeight} />
-                        <Image alt="Palace Resorts Logo" src="/representing/Palaceresorts.jpg" className={logoClass} width={imgWidth} height={imgHeight} />
+                        <Image alt="Palace Resorts Logo" src="/representing/palaceResortsLogo.png" className={logoClass} width={imgWidth} height={imgHeight} />
                     </div>
                 </div>
                 <div id="contact" className="flex flex-col h-full w-full md:w-1/3 justify-between text-gray-700 md:px-16">

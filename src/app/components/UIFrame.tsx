@@ -13,7 +13,7 @@ type UIFrameProps = {
 export default function UIFrame({ id, bgClass, title, mainText, link, isArrowDown }: UIFrameProps) {
     return (
         <div id={id} className={bgClass}>
-            <div className="w-full h-1/2 bg-gradient-to-t from-black via-black/100 to-transparent flex justify-center overflow-x-hidden">
+            <div className="w-full h-1/2 bg-gradient-to-t from-slate-900 via-black/80 to-transparent flex justify-center overflow-x-hidden">
                 <div className="max-w-5xl px-5 text-white md:text-2xl text-md mt-auto mb-16 mx-5">
                     <span className="text-[clamp(1.5rem,5vw,3rem)]">{title}<br/></span>
                     <span>{mainText}</span>
