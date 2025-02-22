@@ -1,5 +1,4 @@
 import nodemailer from "nodemailer";
-import { Form } from "svaria-toolkit";
 
 type Traveler = {
   fName: string;
