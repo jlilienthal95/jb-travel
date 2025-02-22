@@ -4,13 +4,12 @@ import { IoMdMail } from "react-icons/io";
 
 export default function Header() {
     return (
-        <div id="header"
-            className="w-full flex items-center justify-around fixed top-0 z-10 px-2 max-h-30 overflow-x-hidden">
+        <div id="header" className="w-full flex items-center justify-around place-items-center fixed top-0 z-10 px-2 max-h-30 overflow-x-hidden">
             <div className='absolute inset-0 bg-white opacity-65 z-0'></div>
             <Link href="#video+tag">
                 <img src="/JBTC-Logo-v2Noborder.png"
                     alt="J. Brescia Travel Co."
-                    className="max-h-20 md:max-h-24 min-h-[80px] w-full object-contain relative z-10 hover:opacity-55">
+                    className="max-h-20 md:max-h-24 min-h-[80px] object-contain relative z-10 hover:opacity-55">
                 </img>
             </Link>
             <div id="contactAndButtons" className="text-black flex flex-row md:gap-8 gap-3 items-center justify-between relative z-10">
