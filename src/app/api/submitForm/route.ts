@@ -1,4 +1,41 @@
 import nodemailer from "nodemailer";
+import { Form } from "svaria-toolkit";
+
+type Traveler = {
+  fName: string;
+  lName: string;
+  dob: string;
+};
+
+export type TravelerObjectType = {
+  [travelerId: `traveler-${number}`] : Traveler
+}
+
+type FormDataType = {
+  destination: string,
+  travelDateStart: string,
+  travelDateEnd: string,
+  isFlexible: string,
+  budget: string,
+  budgetIsTotal: string,
+  roomTypePref: string,
+  specialRequests: string,
+  attractions: string,
+  flightAssistance: string,
+  anythingElse: string,
+  fName: string,
+  lName: string,
+  email: string,
+  phone: string,
+  address: string,
+  city: string,
+  state: string,
+  zip: string,
+  prefEmail: string,
+  prefPhone: string,
+  prefText: string,
+  travelers: TravelerObjectType,
+}
 
 export async function POST(req: Request) {
     try {
@@ -13,7 +50,7 @@ export async function POST(req: Request) {
         });
 
         // Format the email text in a more readable way
-        const formatEmailText = (data) => {
+        const formatEmailText = (data:FormDataType) => {
             return `
               Travel Inquiry from ${data.fName} ${data.lName}
 
@@ -30,12 +67,12 @@ export async function POST(req: Request) {
               - **Email:** ${data.email}
               - **Phone:** ${data.phone}
               - **Address:** ${data.address}, ${data.city}, ${data.state} ${data.zip}
-              - **Preferred Contact Method:** ${data.prefContact ? "Yes" : "No"}  
+              - **Preferred Contact Method:**
                 (Email: ${data.prefEmail}, Phone: ${data.prefPhone}, Text: ${data.prefText})
 
               **Travelers:**
               ${Object.values(data.travelers).map(
-                  (traveler, index) => `  - **Traveler ${index + 1}:** ${traveler.fName} ${traveler.lName} (DOB: ${traveler.dateOfBirth})`
+                  (traveler, index) => `  - **Traveler ${index + 1}:** ${traveler.fName} ${traveler.lName} (DOB: ${traveler.dob})`
               ).join("\n")}
 
               **Additional Information:**
