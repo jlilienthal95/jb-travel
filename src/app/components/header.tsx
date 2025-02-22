@@ -32,9 +32,9 @@ export default function Header() {
                     </div>
                 </div>
                 <div id="buttonContainer" className='flex flew-row md:gap-5 gap-2'>
-                    <Link href="#planAdventure">
+                    <Link href="#startAdventure">
                         <button className='text-sm md:text-md rounded-2xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40 text-nowrap'>
-                            Plan My Adventure
+                            Start My Adventure
                         </button>
                     </Link>
                     <button className='text-sm md:text-md rounded-2xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40 text-nowrap'>
