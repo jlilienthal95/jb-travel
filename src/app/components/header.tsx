@@ -5,16 +5,16 @@ import { IoMdMail } from "react-icons/io";
 export default function Header() {
     return (
         <div id="header"
-            className="w-full flex items-center justify-around fixed top-0 z-10  px-2 max-h-30 overflow-x-hidden">
+            className="w-full flex items-center justify-around fixed top-0 z-10 px-2 max-h-30 overflow-x-hidden">
             <div className='absolute inset-0 bg-white opacity-65 z-0'></div>
             <Link href="#video+tag">
                 <img src="/JBTC-Logo-v2Noborder.png"
                     alt="J. Brescia Travel Co."
-                    className="max-h-20 md:max-h-24 w-auto relative z-10 hover:opacity-55">
+                    className="max-h-20 md:max-h-24 min-h-[80px] w-full object-contain relative z-10 hover:opacity-55">
                 </img>
             </Link>
             <div id="contactAndButtons" className="text-black flex flex-row md:gap-8 gap-3 items-center justify-between relative z-10">
-                <div id="contactInfoCont" className='flex flex-row md:flex-col'>
+                <div id="contactInfoCont" className='hidden md:flex flex-row md:flex-col'>
                     <div id="phone" className='flex flex-row items-center gap-2 hover:text-gray-600'>
                         <Link href="tel:7272665282">
                             <FaSquarePhone className="text-[38px] md:text-2xl"/>
@@ -33,9 +33,9 @@ export default function Header() {
                     </div>
                 </div>
                 <div id="buttonContainer" className='flex flew-row md:gap-5 gap-3'>
-                    <Link href="#planTrip">
+                    <Link href="#planAdventure">
                         <button className='text-sm md:text-md rounded-2xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40 text-nowrap'>
-                            Plan My Trip
+                            Plan My Adventure
                         </button>
                     </Link>
                     <button className='text-sm md:text-md rounded-2xl border-2 border-black border-opacity-30 md:p-4 p-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40 text-nowrap'>
