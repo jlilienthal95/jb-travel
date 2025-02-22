@@ -49,7 +49,7 @@ export default function Home() {
             bgClass={defBgClass + ' bg-[url(/mexico.jpg)]'}
             title="Elevated Experience"
             mainText="Gain access to exclusive perks, VIP check-ins, premium reservations, and curated experiences that take your trip from special to spectacular."
-            link="#planTrip"
+            link="#planAdventure"
             isArrowDown={true}
           />
           <TripFrame step={step} setStep={setStep}/>
