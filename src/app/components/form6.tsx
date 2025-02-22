@@ -47,6 +47,7 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
                 name={`traveler-${index}`}
                 className={inputClass}
                 onChange={handleTravelers}
+                autoComplete="first-name"
               />
             </div>
             <div className="flex flex-col mt-2">
@@ -57,6 +58,7 @@ export default function Form6({ labelClass, inputClass, setFormData }: FormProps
                 name={`traveler-${index}`}
                 className={inputClass}
                 onChange={handleTravelers}
+                autoComplete="family-name"
               />
             </div>
             <div className="flex flex-col mt-2">

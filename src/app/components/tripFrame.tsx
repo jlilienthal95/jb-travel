@@ -58,7 +58,7 @@ export type FormPropsType = {
 
 export default function TripFrame({step, setStep}:TripFrameProps) {
     const labelClass = "block text-sm font-medium text-gray-900 text-wrap"
-    const inputClass = "block w-full rounded-md bg-slate-100 px-3 py-1.5 text-md text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600"
+    const inputClass = "block w-full rounded-md bg-slate-100 px-3 py-1.5 text-sm text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600"
 
     const [ formData, setFormData ] = useState({
         destination: "",
