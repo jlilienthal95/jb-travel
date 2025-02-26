@@ -13,7 +13,7 @@ export default function Header() {
                 </img>
             </Link>
             <div id="contactAndButtons" className="text-black flex flex-row md:gap-8 gap-3 items-center justify-between relative z-10">
-                <div id="contactInfoCont" className='hid2den md:flex flex-row md:flex-col'>
+                <div id="contactInfoCont" className='hidden md:flex flex-row md:flex-col'>
                     <div id="phone" className='flex flex-row items-center gap-2 hover:text-gray-600'>
                         <Link href="tel:7272665282">
                             <FaSquarePhone className="text-[38px] md:text-2xl"/>
