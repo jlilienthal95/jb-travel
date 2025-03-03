@@ -1,5 +1,5 @@
 "use client"
-import { useState, Dispatch, SetStateAction, useEffect } from 'react';
+import { useState, Dispatch, SetStateAction } from 'react';
 import Form1 from "./form1";
 import Form2 from "./form2";
 import Form3 from "./form3";
@@ -132,7 +132,7 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
         });
     };
 
-    const handleSubmit = async (data: FormDataType) => {
+    const handleSubmit = async () => {
         // console.log("handleSubmit formData:", data)
         try {
             const response = await fetch('/api/submitForm', {
@@ -155,9 +155,9 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
         }
     };
 
-    useEffect(() => {
-        // console.log('formData:', formData);
-    }, [formData]);
+    // useEffect(() => {
+    //     console.log('formData:', formData);
+    // }, [formData]);
 
     return (
         <div id="startAdventure" className="relative flex flex-col flex-grow bg-cover bg-center w-full h-full snap-start snap-always justify-end overflow-x-hidden bg-[url(/greece.jpg)]">
@@ -217,7 +217,7 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
                                 {step === 6 &&(
                                     <button
                                         type="button"
-                                        onClick={() => handleSubmit(formData)}
+                                        onClick={() => handleSubmit()}
                                         className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 px-5 py-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
                                     >
                                         Submit
