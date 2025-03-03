@@ -1,11 +1,43 @@
+"use client";
 import Link from "next/link"
 import { FaCheck } from "react-icons/fa";
 import Image from "next/image"
+import { useEffect } from "react";
 
 export default function Footer() {
     const logoClass = "w-full h-full object-contain md:p-6 p-12"
     const imgHeight = 100
     const imgWidth = 200
+
+    useEffect(() => {
+        const gallery = document.getElementById('gallery');
+        let left = false;
+
+        const interval = setInterval(() => {
+            if(gallery) {
+                if(gallery.scrollLeft === gallery.scrollWidth - gallery.clientWidth){
+                    left = true;
+                }
+                else if(gallery.scrollLeft === 0) {
+                    left = false;
+                }
+                if (!left) {
+                    gallery.scrollBy({
+                        left: 1,
+                        behavior: "instant"
+                    })
+                } else if(left){
+                    gallery.scrollBy({
+                        left: -1,
+                        behavior: "instant"
+                    })
+                }
+            }
+        },12)
+
+        return () => clearInterval(interval)
+    })
+
     return(
         <div id="footer" className="flex md:flex-row flex-col w-full h-full snap-end snap-always bg-white p-10 md:text-lg text-sm">
             <div id="content" className="flex md:flex-row flex-col h-5/6 md:mt-24 mt-[4.5rem]">
@@ -15,7 +47,7 @@ export default function Footer() {
                             Proudly Representing
                         </div>
                     </div>
-                    <div className="md:grid md:grid-cols-3 md:auto-rows-fr md:overflow-hidden overflow-x-scroll md:gap-0 gap-10 md:animate-none h-full w-full place-items-center flex">
+                    <div id="gallery" className="md:grid md:grid-cols-3 md:auto-rows-fr overflow-hidden md:gap-0 gap-10 md:animate-none h-full w-full place-items-center flex">
                         <Image alt="Disney Logo" src="/representing/disneylogo.gif" className={logoClass} width={imgWidth} height={imgHeight} priority />
                         <Image alt="Disney Travel Logo" src="/representing/Walt_Disney_travel.png" className={logoClass} width={imgWidth} height={imgHeight} />
                         <Image alt="Universal Logo" src="/representing/UPRV-Logo-2018.jpg" className={logoClass} width={imgWidth} height={imgHeight} />
@@ -34,18 +66,11 @@ export default function Footer() {
                         </div>
                         <div id="contactInfoCont" className="flex flex-col items-center">
                             <div id="phone" className='flex items-center gap-2 hover:text-gray-400'>
-                                {/* <Link href="tel:7272665282">
-                                    <FaSquarePhone className="text-xl"/>
-                                </Link> */}
                                 <Link href="tel:7272665282">
                                     (727) 266-JBTC
                                 </Link>
                             </div>
-                            {/* <div className="text-5xl">•</div> */}
                             <div id="email" className='flex flex-row items-center gap-2 hover:text-gray-400'>
-                                {/* <Link href="mailto:JBTravelCo@icloud.com">
-                                    <IoMdMail className="text-xl" />
-                                </Link> */}
                                 <Link href="mailto:JBTravelCo@icloud.com">
                                     JBTravelCo@icloud.com
                                 </Link>

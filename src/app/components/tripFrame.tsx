@@ -89,7 +89,7 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
     const nextStep = () => {
         if (step === 1){
             if(!formData.destination || !formData.travelDateStart || !formData.travelDateEnd || !formData.isFlexible) {
-                console.log("step:", step);
+                // console.log("step:", step);
                 alert("Please fill in all required fields before proceeding.");
                 return;
         }
@@ -133,7 +133,7 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
     };
 
     const handleSubmit = async (data: FormDataType) => {
-        console.log("handleSubmit formData:", data)
+        // console.log("handleSubmit formData:", data)
         try {
             const response = await fetch('/api/submitForm', {
                 method: 'POST',
@@ -144,7 +144,7 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
             });
     
             if (response.ok) {
-                console.log('')
+                // console.log('')
                 nextStep();
             } else {
                 alert('Sorry about that... \nSomething went wrong. Please try again or contact us by phone at (727) 266-5282 or email at JBTravelCo@icloud.com.');
@@ -156,7 +156,7 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
     };
 
     useEffect(() => {
-        console.log('formData:', formData);
+        // console.log('formData:', formData);
     }, [formData]);
 
     return (

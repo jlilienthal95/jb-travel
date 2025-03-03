@@ -87,7 +87,7 @@ export async function POST(req: Request) {
         };
 
         await transporter.sendMail(mailOptions);
-        console.log('Email sent:', formatEmailText(formData)); // Log formatted email
+        // console.log('Email sent:', formatEmailText(formData)); // Log formatted email
 
         return new Response(
             JSON.stringify({ message: 'Email sent successfully!' }),
