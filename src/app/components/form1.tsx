@@ -1,6 +1,7 @@
 import { FormPropsType } from "./tripFrame"
 
 export default function form1({formData, labelClass, inputClass, handleChange}: FormPropsType) {
+    const today = new Date().toISOString().split("T")[0];
     return(
         <div className="flex flex-col flex-grow justify-around">
             <div className="w-full">
@@ -10,6 +11,7 @@ export default function form1({formData, labelClass, inputClass, handleChange}: 
                         id="destination"
                         name="destination"
                         type="text"
+                        placeholder="Paris, Cancun, Los Angeles"
                         value={formData.destination}
                         required
                         className={inputClass}
@@ -27,6 +29,7 @@ export default function form1({formData, labelClass, inputClass, handleChange}: 
                             type="date"
                             id="travelDateStart"
                             name="travelDateStart"
+                            min={today}
                             value={formData.travelDateStart}
                             className={inputClass}
                             onChange={handleChange}
@@ -39,6 +42,7 @@ export default function form1({formData, labelClass, inputClass, handleChange}: 
                             type="date"
                             id="travelDateEnd"
                             name="travelDateEnd"
+                            min={formData.travelDateStart || today}
                             value={formData.travelDateEnd}
                             className={inputClass}
                             onChange={handleChange}
