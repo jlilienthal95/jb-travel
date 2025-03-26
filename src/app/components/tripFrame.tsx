@@ -1,5 +1,5 @@
 "use client"
-import { useState, Dispatch, SetStateAction } from 'react';
+import { useState, Dispatch, SetStateAction, useEffect } from 'react';
 import Form1 from "./form1";
 import Form2 from "./form2";
 import Form3 from "./form3";
@@ -50,6 +50,7 @@ type TripFrameProps = {
 }
 
 export type FormPropsType = {
+    formData:FormDataType
     labelClass?: string,
     inputClass?: string,
     handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
@@ -155,9 +156,9 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
         }
     };
 
-    // useEffect(() => {
-    //     console.log('formData:', formData);
-    // }, [formData]);
+    useEffect(() => {
+        console.log('formData:', formData);
+    }, [formData]);
 
     return (
         <div id="startAdventure" className="relative flex flex-col flex-grow bg-cover bg-center w-full h-full snap-start snap-always justify-end overflow-x-hidden bg-[url(/greece.jpg)]">
@@ -171,22 +172,22 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
                                 <h2 className="text-base font-semibold text-gray-900">Your Next Adventure</h2>  
                                 <div className="mb-2 flex flex-col flex-grow">
                                     {step === 1 && (
-                                        <Form1 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange}/>
+                                        <Form1 formData={formData} labelClass={labelClass} inputClass={inputClass} handleChange={handleChange}/>
                                     )}
                                     {step === 2 && (
-                                        <Form2 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                        <Form2 formData={formData} labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
                                     )}
                                     {step === 3 && (
-                                        <Form3 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                        <Form3 formData={formData} labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
                                     )}
                                     {step === 4 && (
-                                        <Form4 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                        <Form4 formData={formData} labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
                                     )}
                                     {step === 5 && (
-                                        <Form5 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
+                                        <Form5 formData={formData} labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} />
                                     )}
                                     {step === 6 && (
-                                        <Form6 labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} setFormData={setFormData}/>
+                                        <Form6 formData={formData} labelClass={labelClass} inputClass={inputClass} handleChange={handleChange} setFormData={setFormData}/>
                                     )}
                                     {step === 7 && (
                                         <Form7/>
@@ -200,7 +201,7 @@ export default function TripFrame({step, setStep}:TripFrameProps) {
                                 <button
                                     type="button"
                                     onClick={prevStep}
-                                    className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 md:px-2 py-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
+                                    className="text-sm md:text-md text-black rounded-xl border-2 border-black border-opacity-30 px-2 py-2 hover:border-opacity-100 hover:bg-white hover:bg-opacity-40"
                                 >
                                     Previous
                                 </button>

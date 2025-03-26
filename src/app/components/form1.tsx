@@ -1,6 +1,6 @@
 import { FormPropsType } from "./tripFrame"
 
-export default function form1({labelClass, inputClass, handleChange}: FormPropsType) {
+export default function form1({formData, labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around">
             <div className="w-full">
@@ -10,6 +10,7 @@ export default function form1({labelClass, inputClass, handleChange}: FormPropsT
                         id="destination"
                         name="destination"
                         type="text"
+                        value={formData.destination}
                         required
                         className={inputClass}
                         onChange={handleChange}
@@ -26,6 +27,7 @@ export default function form1({labelClass, inputClass, handleChange}: FormPropsT
                             type="date"
                             id="travelDateStart"
                             name="travelDateStart"
+                            value={formData.travelDateStart}
                             className={inputClass}
                             onChange={handleChange}
                         />
@@ -37,6 +39,7 @@ export default function form1({labelClass, inputClass, handleChange}: FormPropsT
                             type="date"
                             id="travelDateEnd"
                             name="travelDateEnd"
+                            value={formData.travelDateEnd}
                             className={inputClass}
                             onChange={handleChange}
                         />
@@ -52,7 +55,7 @@ export default function form1({labelClass, inputClass, handleChange}: FormPropsT
                         id="yes"
                         name="isFlexible"
                         value="Yes"
-                        className="w-4 h-4 appearance-none border-2 border-black rounded-full grid place-content-center checked:bg-black"
+                        className="w-3 h-3 appearance-none border-[1px] border-black rounded-full grid place-content-center checked:bg-[#007AFF]"
                         onChange={handleChange}
                     />
                     <label htmlFor="yes" className={labelClass}>Yes</label>
@@ -63,7 +66,7 @@ export default function form1({labelClass, inputClass, handleChange}: FormPropsT
                         id="no"
                         value="No"
                         name="isFlexible"
-                        className="w-4 h-4 appearance-none border-2 border-black rounded-full grid place-content-center checked:bg-black"
+                        className="w-3 h-3 appearance-none border-[1px] border-black rounded-full grid place-content-center checked:bg-[#007AFF]"
                         onChange={handleChange}
                     />
                     <label htmlFor="no"className={labelClass}>No</label>

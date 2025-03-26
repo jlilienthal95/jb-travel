@@ -1,6 +1,6 @@
 import { FormPropsType } from "./tripFrame"
 
-export default function form3({labelClass, inputClass, handleChange}: FormPropsType) {
+export default function form3({formData, labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around text-wrap">
             <div className="w-full">
@@ -11,6 +11,8 @@ export default function form3({labelClass, inputClass, handleChange}: FormPropsT
                         name="attractions"
                         type="text"
                         required
+                        placeholder="Eiffel Tower, Statue of Liberty, The Sphere, etc"
+                        value={formData.attractions}
                         className={inputClass}
                         onChange={handleChange}
                     />
@@ -59,6 +61,7 @@ export default function form3({labelClass, inputClass, handleChange}: FormPropsT
                         name="anythingElse"
                         type="text"
                         required
+                        placeholder="Romantic Getaway, Don't Like Boats, etc"
                         className={inputClass}
                         onChange={handleChange}
                     />

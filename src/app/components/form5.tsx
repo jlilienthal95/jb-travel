@@ -1,6 +1,6 @@
 import { FormPropsType } from "./tripFrame"
 
-export default function form5({labelClass, inputClass, handleChange}: FormPropsType) {
+export default function form5({formData, labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around">
             <fieldset className="w-full">
@@ -44,6 +44,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                         type="text"
                         required
                         autoComplete="address-line1"
+                        value={formData.address}
                         className={inputClass}
                         onChange={handleChange}
                     />
@@ -58,6 +59,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                         type="text"
                         required
                         autoComplete="address-level2"
+                        value={formData.city}
                         className={inputClass}
                         onChange={handleChange}
                     />
@@ -72,6 +74,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                         type="text"
                         required
                         autoComplete="address-level1"
+                        value={formData.state}
                         className={inputClass}
                         onChange={handleChange}
                     />
@@ -86,6 +89,7 @@ export default function form5({labelClass, inputClass, handleChange}: FormPropsT
                         type="text"
                         required
                         autoComplete="postal-code"
+                        value={formData.zip}
                         className={inputClass}
                         onChange={handleChange}
                     />

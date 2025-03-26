@@ -1,19 +1,25 @@
 import { FormPropsType } from "./tripFrame"
 
-export default function form2({labelClass, inputClass, handleChange}: FormPropsType) {
+export default function form2({formData, labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around">
             <div className="w-full">
                 <label htmlFor="budget" className={labelClass}>What is your budget?</label>
                 <div className="mt-2">
-                    <input
-                        id="budget"
-                        name="budget"
-                        type="text"
-                        required
-                        className={inputClass}
-                        onChange={handleChange}
-                    />
+                    <div className="flex flex-row items-center text-black text-sm gap-1">
+                        <span>$</span>
+                        <input
+                            id="budget"
+                            name="budget"
+                            type="number"
+                            min='1'
+                            placeholder="10000"
+                            value={formData.budget}
+                            required
+                            className={inputClass}
+                            onChange={handleChange}
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -42,13 +48,15 @@ export default function form2({labelClass, inputClass, handleChange}: FormPropsT
             </fieldset>
 
             <div className="w-full mt-2">
-                <label htmlFor="roomTypePref" className={labelClass}>Preferred Accomodations</label>
+                <label htmlFor="roomTypePref" className={labelClass}>Preferred Accommodations</label>
                 <div className="mt-2">
                     <input
                         id="roomTypePref"
                         name="roomTypePref"
                         type="text"
+                        placeholder="e.g. Hotel, Apartment, AirBNB"
                         required
+                        value={formData.roomTypePref}
                         className={inputClass}
                         onChange={handleChange}
                     />
@@ -62,6 +70,7 @@ export default function form2({labelClass, inputClass, handleChange}: FormPropsT
                         name="specialRequests"
                         type="text"
                         required
+                        placeholder="Allergies, Disability, Need Workspace"
                         className={inputClass}
                         onChange={handleChange}
                     />

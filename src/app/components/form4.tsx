@@ -1,6 +1,6 @@
 import { FormPropsType } from "./tripFrame"
 
-export default function form4({labelClass, inputClass, handleChange}: FormPropsType) {
+export default function form4({formData, labelClass, inputClass, handleChange}: FormPropsType) {
     return(
         <div className="flex flex-col flex-grow justify-around">
             <div className="w-full">
@@ -12,6 +12,7 @@ export default function form4({labelClass, inputClass, handleChange}: FormPropsT
                         type="text"
                         required
                         autoComplete="first-name"
+                        value={formData.fName}
                         className={inputClass}
                         onChange={handleChange}
                     />
@@ -26,6 +27,7 @@ export default function form4({labelClass, inputClass, handleChange}: FormPropsT
                         type="text"
                         required
                         autoComplete="family-name"
+                        value={formData.lName}
                         className={inputClass}
                         onChange={handleChange}
                     />
@@ -40,6 +42,7 @@ export default function form4({labelClass, inputClass, handleChange}: FormPropsT
                         type="text"
                         required
                         autoComplete="email"
+                        value={formData.email}
                         className={inputClass}
                         onChange={handleChange}
                     />
@@ -51,9 +54,10 @@ export default function form4({labelClass, inputClass, handleChange}: FormPropsT
                     <input
                         id="phone"
                         name="phone"
-                        type="tel"
+                        type="number"
                         required
                         autoComplete="phone"
+                        value={formData.phone}
                         className={inputClass}
                         onChange={handleChange}
                     />
