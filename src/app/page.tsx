@@ -26,7 +26,6 @@ export default function Home() {
           title="Expert Guidance"
           mainText="Our industry expertise and insider knowledge offer exclusive recommendations—from hidden gems to can’t-miss attractions—ensuring your trip goes well beyond the ordinary."
           link="#personalizedPlanning"
-          isArrowDown={true}
           />
         <UIFrame 
           id="personalizedPlanning"
@@ -34,7 +33,6 @@ export default function Home() {
           title="Personalized Planning"
           mainText="Your journey should reflect you. We take the time to understand your preferences and aspirations, then craft an itinerary that’s uniquely yours. From private villas and tailor-made cruises to fun-filled family getaways, every detail is designed around your vision."
           link="#unmatchedSupport"
-          isArrowDown={true}
           />
         <UIFrame 
           id="unmatchedSupport"
@@ -42,7 +40,6 @@ export default function Home() {
           title="Unmatched Support"
           mainText="Luxury means peace of mind. From your first consultation until you return home, we’re with you every step of the way. Need last-minute changes or assistance abroad? We’re available 24/7, just a call or message away."
           link="#elevatedExperience"
-          isArrowDown={true}
           />
         <UIFrame
           id="elevatedExperience"
@@ -50,7 +47,6 @@ export default function Home() {
           title="Elevated Experience"
           mainText="Gain access to exclusive perks, VIP check-ins, premium reservations, and curated experiences that take your trip from special to spectacular."
           link="#startAdventure"
-          isArrowDown={true}
         />
         <TripFrame step={step} setStep={setStep}/>
 
