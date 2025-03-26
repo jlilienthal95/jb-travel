@@ -1,4 +1,4 @@
-import { RiArrowDownWideLine, RiArrowUpWideLine } from "react-icons/ri"
+import { RiArrowDownWideLine } from "react-icons/ri"
 import Link from 'next/link';
 
 type UIFrameProps = {
