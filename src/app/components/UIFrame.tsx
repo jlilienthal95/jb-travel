@@ -16,7 +16,7 @@ export default function UIFrame({ id, bgClass, title, mainText, link }: UIFrameP
                 <div className="max-w-5xl px-5 text-white md:text-2xl text-md mt-auto mx-5">
                     <span className="text-[clamp(1.5rem,5vw,3rem)]">{title}<br/></span>
                     <span>{mainText}</span>
-                    <div id="buttonContainer" className="flex pt-5 pb-5 items-center justify-center gap-x-20">
+                    <div id="buttonContainer" className="flex pt-5 pb-5 items-center justify-center ">
                         <Link href={link}>
                             <RiArrowDownWideLine className="text-3xl md:text-4xl lg:text-5xl hover:text-white text-gray-400"/>
                         </Link>
