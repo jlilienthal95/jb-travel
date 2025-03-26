@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { FormPropsType, TravelerObjectType } from './tripFrame';
 
-export default function Form6({ formData, labelClass, inputClass, setFormData }: FormPropsType) {
+export default function Form6({ labelClass, inputClass, setFormData }: FormPropsType) {
   function handleTravelers(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     if (!setFormData) return;
 
