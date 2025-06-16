@@ -28,6 +28,29 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        {/* Primary Meta Tags */}
+          <meta name="title" content="J. Brescia Travel Co. | From Dream To Destination" />
+          <meta name="description" content="Discover stunning travel destinations and plan your next adventure - from Dream to Destination." />
+
+        {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://jbtravel.co/" />
+          <meta property="og:title" content="J. Brescia Travel Co. | From Dream To Destination" />
+          <meta property="og:description" content="Discover stunning travel destinations and plan your next adventure - from Dream to Destination." />
+          <meta property="og:image" content="https://www.jbtravel.co/hawaii.jpg" />
+
+        {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:url" content="https://jbtravel.co/" />
+          <meta name="twitter:title" content="J. Brescia Travel Co. | From Dream To Destination" />
+          <meta name="twitter:description" content="Discover stunning travel destinations and plan your next adventure - from Dream to Destination." />
+          <meta name="twitter:image" content="https://www.jbtravel.co/hawaii.jpg" />
+
+        
+        {/* Favicon */}
+          <link rel="icon" href="/favicon.png" />
+
         {/* Google Analytics */}
         <Script 
           strategy="afterInteractive" 
@@ -43,7 +66,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-[100dvh]`}>
         {children}
       </body>
     </html>
